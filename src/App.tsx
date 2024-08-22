@@ -90,7 +90,6 @@ function App() {
                   className="divider-about-us animate-fade animation-fade flip"
                   data-aos="fade-up"
                 >
-                  {/* <i className="icon-two-hearts"></i> */}
                   <img src={Heart} />
                 </div>
 
