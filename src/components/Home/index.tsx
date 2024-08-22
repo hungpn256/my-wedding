@@ -21,11 +21,11 @@ const Home = () => {
       <div className="container" style={{ zIndex: 2, marginTop: "96.0705px" }}>
         <div className="row">
           <div className="col-sm-12">
-            <div className="hero-wrapper v-center">
+            <div className="hero-wrapper v-center" data-aos="zoom-out-down">
               <h2
                 data-animation-direction="fade"
                 data-animation-delay="600"
-                className="animate-fade animation-fade text-center"
+                className="text-center"
               >
                 LỄ VU QUY
               </h2>
@@ -64,7 +64,7 @@ const Home = () => {
                 data-animation-delay="1000"
                 className="animate-fade animation-fade text-center"
               >
-                <Button> Gửi lời chúc</Button>
+                <Button data-aos="zoom-out-up"> Gửi lời chúc</Button>
               </div>
             </div>
           </div>

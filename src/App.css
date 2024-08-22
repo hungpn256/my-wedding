@@ -154,6 +154,10 @@
   }
 }
 
+.divider-about-us i::before {
+  line-height: 105px;
+}
+
 #our-partners {
   /* background-image: url("../images/gallery-img3.jpg"); */
 }
