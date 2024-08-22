@@ -110,7 +110,7 @@ function App() {
                       <span className="v-lines"></span>
                       <div className="content">
                         <h3>
-                          Ngô Việt Hoài<small>The Bride</small>
+                          Thu Hà<small>The Bride</small>
                         </h3>
                         <p>
                           Cô gái đến từ xứ Huế mộng mơ, hiện đang sinh sống và
