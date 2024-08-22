@@ -66,7 +66,7 @@ const Header = () => {
                 className="nav-logo d-flex align-items-center h-100 brand mt-1"
               >
                 <h1 style={{ fontSize: 30 }}>
-                  V
+                  H
                   <span className="main-color" style={{ margin: "0 5px" }}>
                     <i className="fa fa-heart"></i>
                   </span>
