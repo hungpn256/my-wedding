@@ -30,13 +30,12 @@
   filter: brightness(90%);
 }
 .header {
-  background-color: aliceblue;
   position: fixed;
   z-index: 99999;
 }
 
 .header .header-nav {
-  background-color: transparent;
+  background-color: white;
   height: 80px;
   padding: 15px 0;
   position: fixed;
