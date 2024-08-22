@@ -50,8 +50,7 @@ function App() {
                           Năng Hưng<small>Chú rể</small>
                         </h3>
                         <p>
-                          Là bác sĩ nha khoa hiện đang công tác tại một phòng
-                          khám nha khoa ở Quận 1 thành phố Hồ Chí Minh. Là...
+                          Là một lập trình viên tại Rikkeisoft...
                           <a
                             className="button-see"
                             data-src="https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg"
