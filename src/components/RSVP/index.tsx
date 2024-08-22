@@ -36,7 +36,6 @@ const RSVP = () => {
                   <div className="vitualTextarea">
                     <textarea
                       id="content"
-                      rows="3"
                       className="form-control"
                       name="content"
                       placeholder="Nhập lời chúc của bạn*"
