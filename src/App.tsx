@@ -10,9 +10,25 @@ import Home from "./components/Home";
 import Loading from "./components/Loading";
 import RSVP from "./components/RSVP";
 import Testimonials from "./components/Testimonials";
+import audio from "./assets/audio.mp3";
 
 function App() {
   const [loading, setIsLoading] = useState(true);
+  const [audioEl] = useState(new Audio(audio));
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioEl.play();
+    } else {
+      audioEl.pause();
+    }
+  }, [isPlaying, audioEl]);
+
+  const playPause = () => {
+    setIsPlaying(!isPlaying);
+    // Logic để phát hoặc tạm dừng nhạc sẽ được thêm vào đây
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -168,29 +184,28 @@ function App() {
                     chúng tôi!
                   </p>
                   <p className="groom-bride-signature">
-                    <span>Kiến Văn</span> &amp; <span>Việt Hoài</span>
+                    <span>Năng Hưng</span> &amp; <span>Thu Hà</span>
                   </p>
-                  {/* <img src="https://preview.iwedding.info/templates/template19/images/signature-2.png" alt="Andrew and Isabella" /> */}
                   <div className="parent-info-group">
                     <div className="parent-infos">
                       <div className="parent-info">
                         <span className="parent-title">Con ông:</span>
-                        <span className="parent-name">Hoàng Anh Kiệt</span>
+                        <span className="parent-name">Phạm Năng Ngà</span>
                       </div>
                       <div className="parent-info">
                         <span className="parent-title">Con bà:</span>
-                        <span className="parent-name">Nguyễn Thị Hoài</span>
+                        <span className="parent-name">Nguyễn Thị Oanh</span>
                       </div>
                     </div>
 
                     <div className="parent-infos">
                       <div className="parent-info">
                         <span className="parent-title">Con ông:</span>
-                        <span className="parent-name">Ngô Xuân Nghĩa</span>
+                        <span className="parent-name">Đỗ Viết Đoàn</span>
                       </div>
                       <div className="parent-info">
                         <span className="parent-title">Con bà:</span>
-                        <span className="parent-name">Trần Hồng Thắm</span>
+                        <span className="parent-name">Phùng Thị Tâm</span>
                       </div>
                     </div>
                   </div>
@@ -1174,6 +1189,47 @@ function App() {
           <RSVP />
           <Donate />
           <Footer />
+          <div
+            className="player"
+            style={{
+              display: "block",
+              position: "fixed",
+              bottom: 30,
+              left: 20,
+            }}
+          >
+            <div onClick={playPause} className="playerIcon">
+              {!isPlaying ? (
+                <span id="playerVolumeOff">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="27"
+                    fill="#fff"
+                    className="bi bi-volume-mute-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+                  </svg>
+                </span>
+              ) : (
+                <span id="playerVolumeOn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="27"
+                    fill="#fff"
+                    className="bi bi-volume-up-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                    <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+                    <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                  </svg>
+                </span>
+              )}
+            </div>
+          </div>
         </>
       )}
     </>

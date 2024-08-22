@@ -1,49 +1,47 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 import "./styles.css";
 const Header = () => {
   useEffect(() => {
-    // const navItems = document.querySelectorAll(".menu-item-link");
-    // const sections = document.querySelectorAll("section");
-    // const observe = new IntersectionObserver(
-    //   (item) => {
-    //     if (item[0].isIntersecting) {
-    //       item[0] &&
-    //         navItems.forEach((i: any) => {
-    //           if (
-    //             i
-    //               .getAttribute("href")
-    //               .includes(item[0].target.getAttribute("id"))
-    //           ) {
-    //             i.classList.add("active");
-    //           } else {
-    //             i.classList.remove("active");
-    //           }
-    //         });
-    //     }
-    //   },
-    //   { threshold: 0.5 }
-    // );
-    // sections.forEach((item) => observe.observe(item));
-    // window.addEventListener(
-    //   "scroll",
-    //   function (e) {
-    //     const nav = document.getElementById("navbar") as HTMLElement;
-    //     if (window.scrollY > 0) {
-    //       nav.classList.add("sticky");
-    //     } else {
-    //       nav.classList.remove("sticky");
-    //     }
-    //     const scrollUp = document.getElementById(
-    //       "scroll-up-btn"
-    //     ) as HTMLElement;
-    //     if (window.scrollY > 500) {
-    //       scrollUp.classList.add("show");
-    //     } else {
-    //       scrollUp.classList.remove("show");
-    //     }
-    //   },
-    //   { passive: true }
-    // );
+    const navItems = document.querySelectorAll(".menu-item-link");
+    const sections = document.querySelectorAll("section");
+    const observe = new IntersectionObserver(
+      (item: any) => {
+        if (item[0].isIntersecting) {
+          navItems.forEach((i: any) => {
+            if (
+              i.getAttribute("href").includes(item[0].target.getAttribute("id"))
+            ) {
+              i.classList.add("active");
+            } else {
+              i.classList.remove("active");
+            }
+          });
+        }
+      },
+      { threshold: 0.5 }
+    );
+    sections.forEach((item) => observe.observe(item));
+    window.addEventListener(
+      "scroll",
+      function () {
+        const nav = document.getElementById("navbar") as HTMLElement;
+        if (window.scrollY > 0) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+        const scrollUp = document.getElementById(
+          "scroll-up-btn"
+        ) as HTMLElement;
+        if (window.scrollY > 500) {
+          scrollUp.classList.add("show");
+        } else {
+          scrollUp.classList.remove("show");
+        }
+      },
+      { passive: true }
+    );
   }, []);
 
   return (

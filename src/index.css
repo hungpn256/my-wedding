@@ -39,3 +39,57 @@ section {
   padding: 0 80px;
   margin: auto;
 }
+
+.bii-player-secondary {
+  position: absolute;
+  width: 310px;
+  left: 25px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.player{
+  position: fixed;
+  bottom: 70px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  z-index: 99999;
+  display: none;
+}
+
+.player .playerIcon{
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #df4758;
+  padding-top: 7px;
+  padding-left: 9px;
+  position: absolute;
+  z-index: 2;
+}
+
+.player::after{
+  content: "";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: rgba(242, 59, 67, 0.3);
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  -webkit-animation: biilogo-pulse 1s infinite;
+  animation: biilogo-pulse 1s infinite;
+  z-index: 1;
+}

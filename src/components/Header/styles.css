@@ -1,5 +1,9 @@
-.header {
+.header  {
   font-family: "Poppins", sans-serif;
+  
+}
+.header * {
+  transition: all 0.5s ease;
 }
 
 .scroll-up-btn {
@@ -44,8 +48,8 @@
   transition: all 0.5s;
 }
 .header .header-nav.sticky {
-  padding: 0;
-  background-color: crimson;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
 }
 
 .header .header-nav .brand {
@@ -78,10 +82,10 @@
 }
 /* .active, */
 .menu .menu-item .menu-item-link:hover {
-  color: #747ba9;
+  color: #fff;
 }
 .menu .menu-item .active {
-  color: #747ba9;
+  color: #8eaeba;
 }
 .checkbtn {
   font-size: 30px;
@@ -113,7 +117,7 @@
     width: 300px;
     height: 100vh;
     background-color: #f7f8fa;
-    top: 60px;
+    top: 70px;
     right: -100%;
     opacity: 0.9;
     transition: 0.5s;
@@ -161,5 +165,18 @@
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .max-width{
+    padding: 0 20px !important;
+  }
+  .checkbtn{
+    margin: 0;
+  }
+
+  .header .header-nav .brand{
+    padding-left: 0 !important;
   }
 }

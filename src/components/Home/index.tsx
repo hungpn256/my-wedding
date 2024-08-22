@@ -1,4 +1,5 @@
 import Button from "../Button";
+import NameImage from "../../assets/name.svg";
 
 const Home = () => {
   return (
@@ -30,38 +31,30 @@ const Home = () => {
                 LỄ VU QUY
               </h2>
               <h1 className="hero-title light text-center">
-                <span
-                  className="d-block d-sm-inline animate-from-right animation-from-right"
-                  data-animation-direction="from-right"
-                  data-animation-delay="300"
-                >
+                {/* <span className="d-block d-sm-inline animate-from-right animation-from-right">
                   Năng Hưng
                 </span>
-                <small
-                  className="d-block d-sm-inline animate-from-top animation-from-top"
-                  data-animation-direction="from-top"
-                  data-animation-delay="300"
-                >
-                  &amp;
+                <small className="d-block d-sm-inline animate-from-top animation-from-top">
+                  {" "}
+                  &amp;{" "}
                 </small>
-                <span
-                  className="d-block d-sm-inline animate-from-left animation-from-left"
-                  data-animation-direction="from-left"
-                  data-animation-delay="300"
-                >
+                <span className="d-block d-sm-inline animate-from-left animation-from-left">
                   Thu Hà
-                </span>
+                </span> */}
+                <img
+                  style={{
+                    width: 800,
+                    objectFit: "cover",
+                  }}
+                  src={NameImage}
+                  alt="Name"
+                />
               </h1>
-              <div
-                className="hero-subtitle light animate-fade animation-fade text-center"
-                data-animation-direction="fade"
-                data-animation-delay="1000"
-              >
+              <div className="hero-subtitle light animate-fade animation-fade text-center">
                 10 Tháng 10 2024 (âm lịch)
               </div>
               <div
                 data-animation-direction="fade"
-                data-animation-delay="1000"
                 className="animate-fade animation-fade text-center"
               >
                 <Button data-aos="zoom-out-up"> Gửi lời chúc</Button>
