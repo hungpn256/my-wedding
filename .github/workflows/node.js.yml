@@ -25,5 +25,11 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
               # Now we have got the access of EC2 and we will start the deploy .
-              cd /home/ubuntu && ls -la
+              cd /home/ubuntu/my-wedding &&
+              git pull &&
+              yarn && 
+              yarn build &&
+              cd dist && 
+              sudo cp -r . /var/www/test/html &&
+              sudo nginx restart
               '
