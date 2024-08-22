@@ -8,46 +8,22 @@ on:
     branches: ["master"]
 
 jobs:
-  build:
+  Deploy:
+    name: Deploy to EC2
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-      steps:
-        - uses: actions/checkout@v2
-        - name: Build & Deploy
-          env:
-            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            HOSTNAME: ${{secrets.SSH_HOST}}
-            USER_NAME: ${{secrets.USER_NAME}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Deploy
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOSTNAME: ${{secrets.SSH_HOST}}
+          USER_NAME: ${{secrets.USER_NAME}}
 
-          run: |
-            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
-                # Now we have got the access of EC2 and we will start the deploy .
-                cd /home/ubuntu/my-wedding &&
-                git pull
-                '
-    # steps:
-    #   - uses: actions/checkout@v4
-    #   - name: Use Node.js ${{ matrix.node-version }}
-    #     uses: actions/setup-node@v4
-    #     with:
-    #       node-version: ${{ matrix.node-version }}
-    #       cache: "npm"
-    #   - run: yarn
-    #   - run: npm run build --if-present
-    #   - run: cd
-    #   - name: Copy files via SSH
-    #     uses: appleboy/scp-action@v0.1.3
-    #     with:
-    #       host: ${{ secrets.SSH_HOST }}
-    #       username: ${{ secrets.SSH_USERNAME }}
-    #       key: ${{ secrets.SSH_PRIVATE_KEY }}
-    #       source: "build/*"
-    #       target: "/var/www/test/html"
-    # - run: sudo cp -r . /var/www/test/html
-    # - run: sudo service nginx restart
+              # Now we have got the access of EC2 and we will start the deploy .
+              cd /home/ubuntu && ls -la
+              '
