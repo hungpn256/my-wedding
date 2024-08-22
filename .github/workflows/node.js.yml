@@ -31,5 +31,5 @@ jobs:
               yarn build &&
               cd dist && 
               sudo cp -r . /var/www/test/html &&
-              sudo nginx restart
+              sudo service nginx restart
               '
