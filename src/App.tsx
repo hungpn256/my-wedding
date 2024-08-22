@@ -47,7 +47,7 @@ function App() {
                       <span className="v-lines"></span>
                       <div className="content">
                         <h3>
-                          Hoàng Kiến Văn<small>The Groom</small>
+                          Năng Hưng<small>The Groom</small>
                         </h3>
                         <p>
                           Là bác sĩ nha khoa hiện đang công tác tại một phòng
