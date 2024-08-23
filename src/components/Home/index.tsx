@@ -24,13 +24,7 @@ const Home = () => {
         <div className="row">
           <div className="col-sm-12">
             <div className="hero-wrapper v-center" data-aos="zoom-out-down">
-              <h2
-                data-animation-direction="fade"
-                data-animation-delay="600"
-                className="text-center"
-              >
-                LỄ VU QUY
-              </h2>
+              <h2 className="text-center">SAVE THE DATE</h2>
               <h1 className="hero-title light text-center">
                 <img
                   style={{

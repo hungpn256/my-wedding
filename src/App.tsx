@@ -69,11 +69,13 @@ function App() {
                           Năng Hưng<small>Chú rể</small>
                         </h3>
                         <p>
-                          Là một lập trình viên tại Rikkeisoft...
+                          Là một lập trình viên hiện đang công tác tại
+                          Rikkeisoft ở Hà Nội. Là một người thông minh và có tư
+                          duy sáng tạo. Đặc biệt, anh có tài năng ca hát
                           <a
                             className="button-see"
                             data-src="https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg"
-                            data-content="Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phố Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình. Với anh: “Gia đình là điểm tựa vững chắc nhất và là bến đỗ bình yên không đâu sánh bằng đối với mỗi con người. Đó luôn là nơi tràn ngập tình yêu thương để ta trở về.”"
+                            data-content="Là một lập trình viên hiện đang công tác tại Rikkeisoft ở Hà Nội. Là một người thông minh và có tư duy sáng tạo. Đặc biệt, anh có tài năng ca hát, với giọng hát cuốn hút và tình cảm. Bên cạnh công việc và đam mê, anh luôn dành tình yêu và sự quan tâm đặc biệt đến gia đình, coi đó là động lực lớn nhất trong cuộc sống."
                             data-instagram="https://instagram.com"
                             data-twitter="https://twitter.com"
                             data-facebook="https://facebook.com"
@@ -128,17 +130,16 @@ function App() {
                       <span className="v-lines"></span>
                       <div className="content">
                         <h3>
-                          Thu Hà<small>The Bride</small>
+                          Thu Hà<small>Cô dâu</small>
                         </h3>
                         <p>
-                          Cô gái đến từ xứ Huế mộng mơ, hiện đang sinh sống và
-                          làm việc tại Sài Gòn. Sau khi tốt nghiệp Học viện Báo
-                          chí và Tuyên truyền, quyết tâm theo đuổi đam mê làm
-                          phóng viên du lịch.
+                          Cô gái đến từ Mê Linh, hiện đang làm việc và sinh sống
+                          tại Hà Nội. Với chiều cao 1m50, cô mang một nét đáng
+                          yêu dễ thương khiến ai gặp cũng yêu mến.
                           <a
                             className="button-see"
                             data-src="https://cdn.biihappy.com/ziiweb/default/website/59b631f29bfb9f7cd20437d27ddbe4db.jpeg"
-                            data-content="Cô gái đến từ xứ Huế mộng mơ, hiện đang sinh sống và làm việc tại Sài Gòn. Sau khi tốt nghiệp Học viện Báo chí và Tuyên truyền, quyết tâm theo đuổi đam mê làm phóng viên du lịch. Là một người hay cười nhưng lại sống nội tâm, thích đọc sách, trồng cây và yêu thiên nhiên. Ngoài ra còn rất thích vẽ vời, nuôi mèo và nuôi ước mơ có cho mình một vườn hồng khoe sắc."
+                            data-content="Cô dâu đến từ Mê Linh, hiện đang làm việc và sinh sống tại Hà Nội. Với chiều cao 1m50, cô mang một nét đáng yêu dễ thương khiến ai gặp cũng yêu mến. Là một người hay cười nhưng lại sống nội tâm, thích trồng cây và yêu thiên nhiên. Ngoài ra còn có niềm đam mê với nấu ăn và thường dành thời gian thử nghiệm những món ăn mới."
                             data-instagram="https://instagram.com"
                             data-twitter="https://twitter.com"
                             data-facebook="https://facebook.com"
@@ -241,7 +242,7 @@ function App() {
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
-                        December 12 2015
+                        October 20 2020
                       </span>
                     </div>
                     <div className="gallery-container" data-aos="fade-right">
@@ -250,7 +251,7 @@ function App() {
                           <div className="item text-center">
                             <img
                               src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg"
-                              alt="Bạn có tin vào tình yêu online không?"
+                              alt="Bạn có tin vào tình yêu mai mối không?"
                               className="w-100 h-auto"
                               style={{ maxWidth: "500px" }}
                             />
@@ -263,16 +264,17 @@ function App() {
                           <div className="neela-style">
                             <span className="h-lines"></span>
                             <span className="v-lines"></span>
-                            <h4>Bạn có tin vào tình yêu online không?</h4>
+                            <h4>Bạn có tin vào tình yêu mai mối không?</h4>
                             <p>
-                              Tôi đã từng không tin vào tình yêu online. Đã từng
-                              nghĩ làm sao có thể thích một người chưa từng gặp
-                              mặt? Vậy mà giờ đây tôi lại đang như vậy, bây giờ
-                              tôi đã hiểu: thế giới ảo tình yêu thật đấy!!! Ngày
-                              ấy vu vơ đăng một dòng status trên facebook than
-                              thở, vu vơ đùa giỡn nói chuyện với một người xa lạ
-                              chưa từng quen. Mà nào hay biết, 4 năm sau người
-                              ấy lại là chồng mình.
+                              Tôi đã từng không tin vào tình yêu do mai mối.
+                              Trong suy nghĩ của tôi khi ấy, gặp nhau chỉ để kết
+                              bạn thôi, làm sao có thể nảy sinh tình cảm được?
+                              Ngày đó, vì nghe lời con bạn thân thời đại học,
+                              tôi cũng thử gặp gỡ, trò chuyện và rồi trở thành
+                              bạn bè. Chúng tôi từng cùng nhau đăng ký tín chỉ,
+                              cùng học, cùng làm bài tập lớn, chẳng hề nghĩ rằng
+                              cuộc đời sẽ thay đổi. Và rồi 4 năm sau người ấy
+                              lại là bạn đời của mình.
                             </p>
                           </div>
                         </div>
@@ -286,7 +288,7 @@ function App() {
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
-                        August 04 2016
+                        November 31 2020
                       </span>
                     </div>
                     <div className="gallery-container" data-aos="fade-left">
@@ -314,15 +316,13 @@ function App() {
                             <span className="v-lines"></span>
                             <h4>Lời tỏ tình dễ thương^^</h4>
                             <p>
-                              Ngày ấy, tôi 21! Một mình giữa phố thị nấp tập.
-                              Mỗi chiều cuối tuần thường chạy xe vòng quanh qua
-                              những con phố, len lỏi trong từng dòng người tấp
-                              nập. Hay thậm chí là ghé vào một quán cà phê ven
-                              đường để ngồi đó và cảm nhận về cuộc sống của
-                              riêng mình. Đôi khi lạc lõng và hơi cô đơn. Nhưng
-                              rồi một ngày đẹp trời, người con trai ấy xuất
-                              hiện, nắm tay rồi thủ thỉ vào tai: “Hy vọng sau
-                              này anh được làm những điều ấy cùng em”.
+                              Vào một ngày đẹp trời, anh rủ tôi đi ăn và hóng
+                              gió. Khoảnh khắc ấy vẫn in sâu trong tâm trí tôi,
+                              bên cạnh cây cô đơn ở Hồ Tây, bầu trời đêm lấp
+                              lánh những đám mây sáng, tạo nên một khung cảnh
+                              tuyệt đẹp. Anh nhẹ nhàng ôm tôi từ phía sau, nắm
+                              lấy bàn tay tôi rồi khẽ thì thầm bên tai: "Mình
+                              chuyển từ bạn thành người yêu nhé?"
                             </p>
                           </div>
                         </div>
@@ -336,7 +336,7 @@ function App() {
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
-                        May 10 2018
+                        April 01 2024
                       </span>
                     </div>
                     <div className="gallery-container" data-aos="fade-right">
@@ -368,12 +368,12 @@ function App() {
                             <span className="v-lines"></span>
                             <h4>Phút giây cầu hôn</h4>
                             <p>
-                              5 năm bên nhau không phải là quãng thời gian quá
-                              dài, nhưng đủ cho chúng ta nhận ra được rất nhiều
-                              điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực
-                              vượt qua những khó khăn trong cuộc sống. Chúng ta
-                              từ 2 con người xa lạ mà bước vào cuộc đời nhau. Và
-                              giờ đây chúng ta tiếp tục cùng nhau sang trang
+                              Gần 4 năm bên nhau không phải là quãng thời gian
+                              quá dài, nhưng đủ cho chúng ta nhận ra được rất
+                              nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ
+                              lực vượt qua những khó khăn trong cuộc sống. Chúng
+                              ta từ 2 con người xa lạ mà bước vào cuộc đời nhau.
+                              Và giờ đây chúng ta tiếp tục cùng nhau sang trang
                               mới. Giây phút anh ngỏ lời “Làm vợ anh nhé!”, em
                               đã nguyện ý đời này, đi đâu cũng được, miễn là
                               cùng anh.
@@ -387,7 +387,7 @@ function App() {
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
-                        July 28 2018
+                        November 10 2024
                       </span>
                     </div>
                     <div className="gallery-container" data-aos="fade-left">
@@ -475,7 +475,7 @@ function App() {
 
                     <div className="invite_info px-2 px-lg-4">
                       <h2 className="fs-1">
-                        Kiến Văn <small>&amp;</small> Việt Hoài
+                        Năng Hưng <small>&amp;</small> Thu Hà
                       </h2>
                       <div>
                         Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của
@@ -513,7 +513,7 @@ function App() {
                           Xác nhận tham dự
                         </a>
                       </div>
-                      <div className="date">04 Tháng 4 2024</div>
+                      <div className="date">10 Tháng 11 2024</div>
                       <div className="count-down-clock">
                         <div
                           id="clock"
@@ -662,8 +662,7 @@ function App() {
                               ></i>
                               <span>TƯ GIA NHÀ NỮ - </span>
                               <strong>
-                                123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
-                                Nẵng
+                                Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội
                               </strong>
                             </p>
                           </div>
@@ -780,8 +779,7 @@ function App() {
                               ></i>
                               <span>TƯ GIA NHÀ NỮ - </span>
                               <strong>
-                                123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
-                                Nẵng
+                                Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội
                               </strong>
                             </p>
                           </div>
@@ -803,13 +801,13 @@ function App() {
                                 {JSON.stringify({
                                   "@context": "https://schema.org",
                                   "@type": "Event",
-                                  name: "LỄ CƯỚI NHÀ NỮ (Đám cưới Kiến Văn và Việt Hoài)",
+                                  name: "LỄ CƯỚI NHÀ NỮ (Đám cưới Năng Hưng và Thu Hà)",
                                   description:
                                     "Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng tôi!. Thông tin chi tiết xem tại website: https://preview.iwedding.info",
                                   startDate: "2023-02-10T07:30:00+07:00",
                                   duration: "00:00",
                                   location:
-                                    "123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng",
+                                    "Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội",
                                   endDate: "2023-02-10T07:30:00+07:00",
                                   image: [
                                     "https://add-to-calendar-button.com/demo_assets/img/1x1.png",
