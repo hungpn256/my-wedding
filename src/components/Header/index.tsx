@@ -47,8 +47,8 @@ const Header = () => {
   return (
     <div>
       <div className="scroll-up-btn" id="scroll-up-btn">
-        <a href="#home" style={{ color: "white" }}>
-          {/* <FontAwesomeIcon icon={faAngleUp} /> */}
+        <a href="#" style={{ color: "white" }}>
+          <i className="fas fa-angle-up"></i>
         </a>
       </div>
       <div className="header">
@@ -84,27 +84,27 @@ const Header = () => {
                 </a>
               </li>
               <li className="menu-item">
-                <a className="menu-item-link" href="#invitation">
-                  Phù Dâu & Phù Rể
-                </a>
-              </li>
-              <li className="menu-item">
-                <a className="menu-item-link" href="#skills">
+                <a className="menu-item-link" href="#gallery">
                   Album Hình Cưới
                 </a>
               </li>
               <li className="menu-item">
-                <a className="menu-item-link" href="#projects">
+                <a className="menu-item-link" href="#bridesmaids">
+                  Phù Dâu & Phù Rể
+                </a>
+              </li>
+              <li className="menu-item">
+                <a className="menu-item-link" href="#giftregistry">
                   Sự kiện cưới
                 </a>
               </li>
               <li className="menu-item">
-                <a className="menu-item-link" href="#contact">
+                <a className="menu-item-link" href="#rsvp">
                   Sổ Lưu Bút
                 </a>
               </li>
               <li className="menu-item">
-                <a className="menu-item-link" href="#contact">
+                <a className="menu-item-link" href="#donate">
                   Mừng Cưới
                 </a>
               </li>

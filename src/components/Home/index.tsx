@@ -15,6 +15,7 @@ const Home = () => {
             style={{
               backgroundImage: `url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/a33b08a813ee02e7a4b7d72ce05d9e93.jpg")`,
               zIndex: 2,
+              backgroundPosition: "center",
             }}
           ></div>
         </div>
@@ -31,16 +32,6 @@ const Home = () => {
                 LỄ VU QUY
               </h2>
               <h1 className="hero-title light text-center">
-                {/* <span className="d-block d-sm-inline animate-from-right animation-from-right">
-                  Năng Hưng
-                </span>
-                <small className="d-block d-sm-inline animate-from-top animation-from-top">
-                  {" "}
-                  &amp;{" "}
-                </small>
-                <span className="d-block d-sm-inline animate-from-left animation-from-left">
-                  Thu Hà
-                </span> */}
                 <img
                   style={{
                     width: 800,

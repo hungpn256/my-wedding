@@ -59,7 +59,7 @@
   transition: 0.5s;
 }
 .header .header-nav .brand span {
-  color: crimson;
+  color: crimson !important;
   transition: 2s;
 }
 .sticky .brand span {
@@ -114,15 +114,15 @@
     font-family: "Open Sans", sans-serif;
     position: fixed;
     z-index: 9999;
-    width: 300px;
+    width: 200px;
     height: 100vh;
-    background-color: #f7f8fa;
-    top: 70px;
+    background-color: #f7f8faee;
+    top: 72px;
     right: -100%;
-    opacity: 0.9;
     transition: 0.5s;
     margin-right: 0;
     padding-top: 30px;
+    backdrop-filter: blur(10px);
   }
   .header .header-nav .menu-item {
     display: block !important;
