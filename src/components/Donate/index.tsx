@@ -1,7 +1,7 @@
 const Donate = () => {
   return (
     <section id="donate">
-      <div className="container">
+      <div className="container" data-aos="flip-up">
         <div className="row">
           <div className="col-sm-12">
             <h2 className="section-title">Hộp mừng cưới</h2>
@@ -11,7 +11,7 @@ const Donate = () => {
 
       <div className="container donate-box">
         <div className="row justify-content-center">
-          <div className="col-sm-6 col-lg-4 donate-card">
+          <div className="col-sm-6 col-lg-4 donate-card" data-aos="fade-up">
             <div className="map-info-container">
               <div className="info-wrapper mt-0">
                 <div className="location-info">
@@ -111,7 +111,7 @@ const Donate = () => {
             </div>
           </div>
 
-          <div className="col-sm-6 col-lg-4 donate-card">
+          <div className="col-sm-6 col-lg-4 donate-card" data-aos="fade-up">
             <div className="map-info-container">
               <div className="info-wrapper mt-0">
                 <div className="location-info">

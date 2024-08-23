@@ -48,7 +48,7 @@ section {
   overflow: hidden;
 }
 
-.player{
+.player {
   position: fixed;
   bottom: 70px;
   left: 50px;
@@ -58,7 +58,7 @@ section {
   display: none;
 }
 
-.player .playerIcon{
+.player .playerIcon {
   cursor: pointer;
   display: block;
   width: 40px;
@@ -75,7 +75,7 @@ section {
   z-index: 2;
 }
 
-.player::after{
+.player::after {
   content: "";
   position: absolute;
   -webkit-border-radius: 50%;
@@ -92,4 +92,29 @@ section {
   -webkit-animation: biilogo-pulse 1s infinite;
   animation: biilogo-pulse 1s infinite;
   z-index: 1;
+}
+
+.heart-falling {
+  color: #f44292;
+  position: fixed;
+  animation: falling 6s infinite linear;
+  z-index: 1000000000;
+}
+
+.heart-falling:nth-of-type(1) {
+  bottom: 1200px;
+  left: 25%;
+}
+
+@keyframes falling {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    bottom: -25px;
+    transform: rotate(-360deg);
+  }
 }

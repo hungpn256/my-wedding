@@ -1,16 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import "./App.css";
+import audio from "./assets/audio.mp3";
 import Heart from "./assets/heart.svg";
 import Donate from "./components/Donate";
 import Footer from "./components/Footer";
 import Groomsmen from "./components/Groomsmen";
 import Header from "./components/Header";
+import HeartFalling from "./components/HeartFalling";
 import Home from "./components/Home";
 import Loading from "./components/Loading";
 import RSVP from "./components/RSVP";
 import Testimonials from "./components/Testimonials";
-import audio from "./assets/audio.mp3";
 
 function App() {
   const [loading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
         <Loading />
       ) : (
         <>
+          <HeartFalling />
           <Header />
           <Home />
           <section id="couple">
@@ -171,8 +173,7 @@ function App() {
               <div className="row">
                 <div
                   className="about-us-desc col-lg-8 offset-lg-2 animate-from-bottom animation-from-bottom"
-                  data-animation-direction="from-bottom"
-                  data-animation-delay="300"
+                  data-aos="flip-right"
                 >
                   <h3>We are Getting Married</h3>
                   <p>
@@ -232,26 +233,18 @@ function App() {
           </section>
           <section id="story">
             <div className="container">
-              <div className="row">
+              <div className="row" data-aos="zoom-in-up">
                 <div className="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                   <div className="timeline">
-                    <div
-                      className="year animate-from-top animation-from-top"
-                      data-animation-direction="from-top"
-                      data-animation-delay="250"
-                    >
+                    <div className="year animate-from-top animation-from-top">
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
                         December 12 2015
                       </span>
                     </div>
-                    <div className="gallery-container">
-                      <div
-                        className="timeline-gallery-wrapper animate-from-left animation-from-left"
-                        data-animation-direction="from-left"
-                        data-animation-delay="250"
-                      >
+                    <div className="gallery-container" data-aos="fade-right">
+                      <div className="timeline-gallery-wrapper">
                         <div className="timeline-gallery-del">
                           <div className="item text-center">
                             <img
@@ -264,11 +257,7 @@ function App() {
                         </div>
                       </div>
 
-                      <div
-                        className="description-wrapper animate-from-bottom animation-from-bottom"
-                        data-animation-direction="from-bottom"
-                        data-animation-delay="250"
-                      >
+                      <div className="description-wrapper">
                         <div className="description">
                           <div className="neela-style">
                             <span className="h-lines"></span>
@@ -291,8 +280,7 @@ function App() {
 
                     <div
                       className="year animate-from-top animation-from-top"
-                      data-animation-direction="from-top"
-                      data-animation-delay="250"
+                      data-aos="zoom-in-up"
                     >
                       <span className="neela-style">
                         <span className="h-lines"></span>
@@ -300,12 +288,8 @@ function App() {
                         August 04 2016
                       </span>
                     </div>
-                    <div className="gallery-container">
-                      <div
-                        className="timeline-gallery-wrapper animate-from-left animation-from-left"
-                        data-animation-direction="from-left"
-                        data-animation-delay="250"
-                      >
+                    <div className="gallery-container" data-aos="fade-left">
+                      <div className="timeline-gallery-wrapper animate-from-left animation-from-left">
                         <div className="timeline-gallery-del">
                           <div className="item text-center">
                             <img
@@ -346,8 +330,7 @@ function App() {
 
                     <div
                       className="year animate-from-top animation-from-top"
-                      data-animation-direction="from-top"
-                      data-animation-delay="250"
+                      data-aos="zoom-in-up"
                     >
                       <span className="neela-style">
                         <span className="h-lines"></span>
@@ -355,7 +338,7 @@ function App() {
                         May 10 2018
                       </span>
                     </div>
-                    <div className="gallery-container">
+                    <div className="gallery-container" data-aos="fade-right">
                       <div
                         className="timeline-gallery-wrapper animate-from-left animation-from-left"
                         data-animation-direction="from-left"
@@ -399,23 +382,15 @@ function App() {
                       </div>
                     </div>
 
-                    <div
-                      className="year animate-from-top animation-from-top"
-                      data-animation-direction="from-top"
-                      data-animation-delay="250"
-                    >
+                    <div className="year" data-aos="zoom-in-up">
                       <span className="neela-style">
                         <span className="h-lines"></span>
                         <span className="v-lines"></span>
                         July 28 2018
                       </span>
                     </div>
-                    <div className="gallery-container">
-                      <div
-                        className="timeline-gallery-wrapper animate-from-left animation-from-left"
-                        data-animation-direction="from-left"
-                        data-animation-delay="250"
-                      >
+                    <div className="gallery-container" data-aos="fade-left">
+                      <div className="timeline-gallery-wrapper ">
                         <div className="timeline-gallery-del">
                           <div className="item text-center">
                             <img
@@ -428,11 +403,7 @@ function App() {
                         </div>
                       </div>
 
-                      <div
-                        className="description-wrapper animate-from-bottom animation-from-bottom"
-                        data-animation-direction="from-bottom"
-                        data-animation-delay="250"
-                      >
+                      <div className="description-wrapper">
                         <div className="description">
                           <div className="neela-style">
                             <span className="h-lines"></span>
@@ -455,17 +426,12 @@ function App() {
                   </div>
 
                   <div className="timeline_footer">
-                    <div
-                      data-animation-direction="from-top"
-                      data-animation-delay="250"
-                      className="animate-from-top animation-from-top"
-                    >
+                    <div>
                       <i className="icon-diamond-ring"></i>
                     </div>
                     <div
                       className="punchline animate-from-bottom animation-from-bottom"
-                      data-animation-direction="from-bottom"
-                      data-animation-delay="250"
+                      data-aos="fade-up"
                     >
                       <small>This is where our FOREVER BEGINS!</small>
                     </div>
@@ -485,13 +451,13 @@ function App() {
           >
             <div className="section-divider-top-1 off-section"></div>
             <div className="container">
-              <div className="row">
+              <div className="row" data-aos="fade-down">
                 <div className="col-sm-12">
                   <h1 className="section-title light">The Big Day!</h1>
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row" data-aos="fade-up">
                 <div className="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 center">
                   <div
                     className="invite neela-style animate-from-left animation-from-left"
@@ -579,38 +545,29 @@ function App() {
           <section id="gallery">
             <div className="container">
               <div className="row">
-                <div className="col-sm-12">
+                <div className="col-sm-12" data-aos="fade-up">
                   <h1 className="section-title">Album Hình Cưới</h1>
-                  {/* <div className="center m-0 mt-2 mb-2">
-          <a
-            href="https://preview.iwedding.info/photo-album"
-            target="_blank"
-            className="btn btn-primary px-2"
-            style={{ minWidth: '240px', maxWidth: '240px' }}
-          >
-            Xem album
-          </a>
-        </div> */}
+                  <div className="center m-0 mt-2 mb-2">
+                    <a
+                      href="https://preview.iwedding.info/photo-album"
+                      target="_blank"
+                      className="btn btn-primary px-2"
+                      style={{ minWidth: "240px", maxWidth: "240px" }}
+                    >
+                      Xem album
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="container">
-              <div className="row">
+              <div className="row" data-aos="fade-up">
                 <div className="col col-xs-12">
                   <div
                     className="gallery-container gallery-fancybox masonry-gallery"
                     style={{ position: "relative", height: "1967.45px" }}
                   >
-                    {/* JSX doesn't support inline <script> tags. You need to handle this separately in your React code. */}
-                    {/* 
-          photoGalleries.push({
-            src : "https://cdn.biihappy.com/ziiweb/default/website/galleries/61990296d7e97a1853119579/large.jpg",
-            thumb: "https://cdn.biihappy.com/ziiweb/default/website/galleries/61990296d7e97a1853119579/small.jpg",
-            subHtml: `<div class="lg-sub-html"><h4>Tình yêu là điều kiện trong đó hạnh phúc của người khác là điều cần thiết cho chính bạn</h4></div>`
-          });
-          */}
-
                     <div
                       className="grid grid-item btn-see-more-gallery"
                       data-index="0"
@@ -794,7 +751,7 @@ function App() {
             }}
           >
             <div className="section-divider-top-1 off-section"></div>
-            <div className="container">
+            <div className="container" data-aos="fade-right">
               <div className="row">
                 <div className="col-sm-12">
                   <h1 className="section-title light">
@@ -840,17 +797,22 @@ function App() {
             <div className="container">
               <div className="row">
                 <div className="col-md-8 col-xl-6 events-boxs py-5">
-                  <h2 className="section-title-lg desc text-white">
+                  <h2
+                    className="section-title-lg desc text-white"
+                    data-aos="fade-up"
+                  >
                     Sự Kiện Cưới
                   </h2>
-                  <div className="section-desc mb-5 px-5 text-center">
+                  <div
+                    className="section-desc mb-5 px-5 text-center"
+                    data-aos="fade-up"
+                  >
                     Tình yêu đích thực đứng về phía nhau trong những ngày tốt
                     đẹp và sát cánh hơn trong những ngày tồi tệ.
                   </div>
                   <ul className="wedding-gifts">
                     <li
-                      data-animation-direction="from-bottom"
-                      data-animation-delay="300"
+                      data-aos="flip-up"
                       className="animate-from-bottom animation-from-bottom"
                     >
                       <div className="neela-style">
@@ -968,8 +930,7 @@ function App() {
                     </li>
 
                     <li
-                      data-animation-direction="from-bottom"
-                      data-animation-delay="300"
+                      data-aos="flip-up"
                       className="animate-from-bottom animation-from-bottom"
                     >
                       <div className="neela-style">
@@ -1103,15 +1064,14 @@ function App() {
           >
             <div className="container">
               <div className="row">
-                <div className="col-sm-12">
+                <div className="col-sm-12" data-aos="fade-up">
                   <h2 className="section-title light">Phù dâu</h2>
                 </div>
               </div>
               <div className="row center">
                 <div
-                  className="element bmaid-gmen col-sm-6 col-lg-4 animate-from-top animation-from-top"
-                  data-animation-direction="from-top"
-                  data-animation-delay="300"
+                  className="element bmaid-gmen col-sm-6 col-lg-4"
+                  data-aos="fade-right"
                 >
                   <div className="image">
                     <img
@@ -1145,9 +1105,8 @@ function App() {
                   </div>
                 </div>
                 <div
-                  className="element bmaid-gmen col-sm-6 col-lg-4 animate-from-top animation-from-top"
-                  data-animation-direction="from-top"
-                  data-animation-delay="300"
+                  className="element bmaid-gmen col-sm-6 col-lg-4"
+                  data-aos="fade-left"
                 >
                   <div className="image">
                     <img

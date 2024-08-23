@@ -11,7 +11,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="bg-color side-flowers-light">
-      <div className="container">
+      <div className="container" data-aos="fade-in">
         <div className="row">
           <div className="col-lg-12 col-xl-10 offset-xl-1">
             <OwlCarousel

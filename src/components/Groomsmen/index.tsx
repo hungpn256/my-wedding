@@ -29,7 +29,7 @@ const Groomsmen = () => {
       }}
     >
       <div className="container">
-        <div className="row">
+        <div className="row" data-aos="fade-out">
           <div className="col-sm-12">
             <h2 className="section-title light">Phù rể</h2>
           </div>
@@ -37,13 +37,11 @@ const Groomsmen = () => {
 
         <div className="row center">
           {groomsmenData.map((groom, index) => (
-            <div
-              key={index}
-              className="element bmaid-gmen col-sm-6 col-lg-4 animate-from-top animation-from-top"
-              data-animation-direction="from-top"
-              data-animation-delay="300"
-            >
-              <div className="image">
+            <div key={index} className="element bmaid-gmen col-sm-6 col-lg-4">
+              <div
+                className="image"
+                data-aos={index % 2 === 0 ? "flip-right" : "flip-left"}
+              >
                 <img
                   src={groom.image}
                   alt={groom.name}

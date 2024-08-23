@@ -1,7 +1,7 @@
 const RSVP = () => {
   return (
     <section id="rsvp" className="section-bg-color extra-padding-section">
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className="row">
           <div className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
             <div className="form-wrapper flowers neela-style">
