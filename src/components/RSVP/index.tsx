@@ -1,4 +1,38 @@
+import { useEffect, useState } from "react";
+import { IRSVP } from "../../models/rsvp";
+import { createRsvp, getRsvp } from "../../services/rsvp";
+
 const RSVP = () => {
+  const [page, setPage] = useState(1);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [content, setContent] = useState("");
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getData(page);
+  }, [page]);
+
+  const getData = async (page: number) => {
+    try {
+      const res = await getRsvp(page, 10);
+      setData(res.data.rsvp);
+    } catch (error) {
+      console.log("🚀 ~ getData ~ error:", error);
+    }
+  };
+
+  const onSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      await createRsvp({ name, email, content });
+      getData(page);
+      setName("");
+      setContent("");
+      setEmail("");
+    } catch (error) {
+      console.log("🚀 ~ onSubmit ~ error:", error);
+    }
+  };
   return (
     <section id="rsvp" className="section-bg-color extra-padding-section">
       <div className="container" data-aos="fade-up">
@@ -11,8 +45,6 @@ const RSVP = () => {
               <form
                 id="wish-form"
                 className="form validate-rsvp-form row contact-validation-active"
-                method="post"
-                noValidate
               >
                 <div>
                   <input
@@ -20,6 +52,8 @@ const RSVP = () => {
                     name="name"
                     placeholder="Tên của bạn*"
                     className="form-control"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
 
@@ -29,6 +63,8 @@ const RSVP = () => {
                     name="email"
                     placeholder="E-mail"
                     className="form-control"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -39,6 +75,8 @@ const RSVP = () => {
                       className="form-control"
                       name="content"
                       placeholder="Nhập lời chúc của bạn*"
+                      value={content}
+                      onChange={(e) => setContent(e.target.value)}
                     ></textarea>
                     <div className="textAreaIcons">
                       <span
@@ -123,9 +161,9 @@ const RSVP = () => {
 
                 <div className="center">
                   <button
-                    type="submit"
                     className="btn btn-primary submit_form"
                     style={{ width: "214px" }}
+                    onClick={onSubmit}
                   >
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
@@ -140,14 +178,14 @@ const RSVP = () => {
                 </div>
               </form>
               <div className="wish-box">
-                <div className="wish-box-item">
-                  <strong>CEO của Biihappy</strong>
-                  <p>
-                    "Một cuộc hôn nhân thành công đòi hỏi phải yêu nhiều lần, và
-                    luôn ở cùng một người" - Chúc cho hai bạn sẽ có được một
-                    cuộc hôn nhân viên mãn, trăm năm hạnh phúc!
-                  </p>
-                </div>
+                {data.map((item: IRSVP) => {
+                  return (
+                    <div className="wish-box-item">
+                      <strong>{item.name}</strong>
+                      <p>{item.content}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
