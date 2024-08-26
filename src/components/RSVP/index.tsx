@@ -3,7 +3,7 @@ import { IRSVP } from "../../models/rsvp";
 import { createRsvp, getRsvp } from "../../services/rsvp";
 
 const RSVP = () => {
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
@@ -21,7 +21,8 @@ const RSVP = () => {
     }
   };
 
-  const onSubmit = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onSubmit = async (e: any) => {
     try {
       e.preventDefault();
       await createRsvp({ name, email, content });
