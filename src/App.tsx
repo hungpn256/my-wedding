@@ -4,7 +4,10 @@ import "./App.css";
 import Loading from "./components/Loading";
 import HomePage from "./pages/Home";
 
-const AppContext = createContext({});
+export const AppContext = createContext<{
+  loading?: boolean;
+  setLoading?: React.Dispatch<React.SetStateAction<boolean>>;
+}>({});
 function App() {
   const [loading, setLoading] = useState(true);
 

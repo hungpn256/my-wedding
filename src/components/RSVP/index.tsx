@@ -1,4 +1,5 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useContext, useEffect, useState } from "react";
+import { AppContext } from "../../App";
 import { IRSVP } from "../../models/rsvp";
 import { createRsvp, getRsvp } from "../../services/rsvp";
 
@@ -8,16 +9,22 @@ const RSVP = () => {
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
   const [data, setData] = useState([]);
+  const { setLoading } = useContext(AppContext);
   useEffect(() => {
     getData(page);
   }, [page]);
 
   const getData = async (page: number) => {
     try {
+      setLoading?.(true);
       const res = await getRsvp(page, 10);
       setData(res.data.rsvp);
     } catch (error) {
       console.log("🚀 ~ getData ~ error:", error);
+    } finally {
+      setTimeout(() => {
+        setLoading?.(false);
+      }, 400);
     }
   };
 

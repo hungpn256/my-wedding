@@ -1,6 +1,41 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 const Invitation = () => {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2024-11-10T00:00:00"); // 10 tháng 11 năm 2024
+    const currentDate = new Date();
+
+    const difference = targetDate.getTime() - currentDate.getTime();
+
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer); // Dọn dẹp bộ đếm
+  }, []);
+
   return (
     <section
       id="invitation"
@@ -85,16 +120,16 @@ const Invitation = () => {
                     data-text-second="Giây"
                   >
                     <div className="box">
-                      <div>140</div> <span>Ngày</span>
+                      <div>{timeLeft.days}</div> <span>Ngày</span>
                     </div>
                     <div className="box">
-                      <div>13</div> <span>Giờ</span>
+                      <div>{timeLeft.hours}</div> <span>Giờ</span>
                     </div>
                     <div className="box">
-                      <div>46</div> <span>Phút</span>
+                      <div>{timeLeft.minutes}</div> <span>Phút</span>
                     </div>
                     <div className="box">
-                      <div>41</div> <span>Giây</span>
+                      <div>{timeLeft.seconds}</div> <span>Giây</span>
                     </div>
                   </div>
                 </div>
