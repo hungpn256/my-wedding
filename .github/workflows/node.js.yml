@@ -30,6 +30,6 @@ jobs:
               yarn && 
               yarn build &&
               cd dist && 
-              sudo cp -r . /var/www/test/html &&
+              sudo cp -r . /var/www/hungpn256.click/html &&
               sudo service nginx restart
               '
