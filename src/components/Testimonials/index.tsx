@@ -1,5 +1,6 @@
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { memo } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 const Testimonials = () => {
@@ -35,5 +36,5 @@ const Testimonials = () => {
     </section>
   );
 };
-
-export default Testimonials;
+const TestimonialsMemo = memo(Testimonials);
+export default TestimonialsMemo;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { IRSVP } from "../../models/rsvp";
 import { createRsvp, getRsvp } from "../../services/rsvp";
 
@@ -195,5 +195,5 @@ const RSVP = () => {
     </section>
   );
 };
-
-export default RSVP;
+const RSVPMemo = memo(RSVP);
+export default RSVPMemo;

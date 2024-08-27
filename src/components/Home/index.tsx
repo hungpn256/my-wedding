@@ -1,5 +1,6 @@
-import Button from "../Button";
+import { memo } from "react";
 import NameImage from "../../assets/name.svg";
+import Button from "../Button";
 
 const Home = () => {
   return (
@@ -52,4 +53,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+const HomeMemo = memo(Home);
+export default HomeMemo;

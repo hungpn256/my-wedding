@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const Footer = () => {
   return (
     <footer id="footer-onepage" className="bg-color">
@@ -57,5 +59,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
+const FooterMemo = memo(Footer);
+export default FooterMemo;

@@ -1,9 +1,7 @@
-import axios from "axios";
 import { IRSVP } from "../models/rsvp";
-
-axios.defaults.baseURL = "https://hungpn256.click/";
+import { axiosClient } from "./axiosClient";
 
 export const getRsvp = (page: number, limit: number) =>
-  axios.get("/api/rsvp", { params: { page, limit } });
+  axiosClient.get("/api/rsvp", { params: { page, limit } });
 
-export const createRsvp = (data: IRSVP) => axios.post("/api/rsvp", data);
+export const createRsvp = (data: IRSVP) => axiosClient.post("/api/rsvp", data);

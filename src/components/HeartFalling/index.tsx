@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 
 const HeartFalling = () => {
   useEffect(() => {
@@ -27,5 +27,5 @@ const HeartFalling = () => {
   }, []);
   return <div id="manage-heart"></div>;
 };
-
-export default HeartFalling;
+const HeartFallingMemo = memo(HeartFalling);
+export default HeartFallingMemo;

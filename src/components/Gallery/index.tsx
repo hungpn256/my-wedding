@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions, Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
@@ -9,7 +9,7 @@ const slides = images.map(({ original }) => ({
   src: original,
 }));
 
-export default function GalleryImage() {
+function GalleryImage() {
   const [index, setIndex] = useState(-1);
 
   const handleClick = (index: number) => setIndex(index);
@@ -67,3 +67,6 @@ export default function GalleryImage() {
     </section>
   );
 }
+
+const GalleryImageMemo = memo(GalleryImage);
+export default GalleryImageMemo;

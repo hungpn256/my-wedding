@@ -1,5 +1,6 @@
-import QRHung from "/src/assets/qr-hung.jpg";
+import { memo } from "react";
 import QRHa from "/src/assets/qr-ha.jpg";
+import QRHung from "/src/assets/qr-hung.jpg";
 const Donate = () => {
   return (
     <section id="donate">
@@ -79,5 +80,5 @@ const Donate = () => {
     </section>
   );
 };
-
-export default Donate;
+const DonateMemo = memo(Donate);
+export default DonateMemo;

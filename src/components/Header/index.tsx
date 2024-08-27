@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import "./styles.css";
 const Header = () => {
   useEffect(() => {
@@ -115,5 +115,5 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
+const HeaderMemo = memo(Header);
+export default HeaderMemo;

@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const groomsmenData = [
   {
     name: "Trần Đức Minh",
@@ -78,5 +80,5 @@ const Groomsmen = () => {
     </section>
   );
 };
-
-export default Groomsmen;
+const GroomsmenMemo = memo(Groomsmen);
+export default GroomsmenMemo;

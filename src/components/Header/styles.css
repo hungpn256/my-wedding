@@ -1,6 +1,5 @@
-.header  {
+.header {
   font-family: "Poppins", sans-serif;
-  
 }
 .header * {
   transition: all 0.5s ease;
@@ -35,7 +34,7 @@
 }
 .header {
   position: fixed;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .header .header-nav {
@@ -169,14 +168,14 @@
 }
 
 @media (max-width: 700px) {
-  .max-width{
+  .max-width {
     padding: 0 20px !important;
   }
-  .checkbtn{
+  .checkbtn {
     margin: 0;
   }
 
-  .header .header-nav .brand{
+  .header .header-nav .brand {
     padding-left: 0 !important;
   }
 }
