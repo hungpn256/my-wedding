@@ -20,7 +20,8 @@ const RSVP = () => {
   }, [page]);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout | undefined;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let timeout: any;
     if (message) {
       timeout = setTimeout(() => {
         setMessage(undefined);
