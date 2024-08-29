@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createContext, useEffect, useState } from "react";
 import "./App.css";
@@ -12,9 +14,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    AOS.init({ duration: 600, easing: "ease-out-back" });
+
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (

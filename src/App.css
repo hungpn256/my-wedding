@@ -7373,7 +7373,6 @@ textarea.form-control {
   padding: 5px 10px;
   font-size: 16px;
   text-align: center;
-  display: none;
 }
 
 @media (max-width: 767px) {
@@ -7979,7 +7978,6 @@ textarea.form-control {
   padding: 5px 10px;
   font-size: 16px;
   text-align: center;
-  display: none;
 }
 @media (max-width: 767px) {
   .contact-validation-active #success,
