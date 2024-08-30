@@ -218,18 +218,24 @@ function HomePage() {
       </section>
       <section id="story">
         <div className="container">
-          <div className="row" data-aos="zoom-in-up">
+          <div className="row">
             <div className="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
               <div className="timeline">
-                <div className="year animate-from-top animation-from-top">
+                <div
+                  className="year animate-from-top animation-from-top"
+                  data-aos="zoom-in-up"
+                >
                   <span className="neela-style">
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
                     October 20 2020
                   </span>
                 </div>
-                <div className="gallery-container" data-aos="fade-right">
-                  <div className="timeline-gallery-wrapper">
+                <div className="gallery-container">
+                  <div
+                    className="timeline-gallery-wrapper"
+                    data-aos="fade-left"
+                  >
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
@@ -242,7 +248,7 @@ function HomePage() {
                     </div>
                   </div>
 
-                  <div className="description-wrapper">
+                  <div className="description-wrapper" data-aos="fade-right">
                     <div className="description">
                       <div className="neela-style">
                         <span className="h-lines"></span>
@@ -273,8 +279,11 @@ function HomePage() {
                     November 31 2020
                   </span>
                 </div>
-                <div className="gallery-container" data-aos="fade-left">
-                  <div className="timeline-gallery-wrapper animate-from-left animation-from-left">
+                <div className="gallery-container">
+                  <div
+                    className="timeline-gallery-wrapper"
+                    data-aos="fade-left"
+                  >
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
@@ -287,11 +296,7 @@ function HomePage() {
                     </div>
                   </div>
 
-                  <div
-                    className="description-wrapper animate-from-bottom animation-from-bottom"
-                    data-animation-direction="from-bottom"
-                    data-animation-delay="250"
-                  >
+                  <div className="description-wrapper" data-aos="fade-right">
                     <div className="description">
                       <div className="neela-style">
                         <span className="h-lines"></span>
@@ -321,11 +326,10 @@ function HomePage() {
                     April 01 2024
                   </span>
                 </div>
-                <div className="gallery-container" data-aos="fade-right">
+                <div className="gallery-container">
                   <div
-                    className="timeline-gallery-wrapper animate-from-left animation-from-left"
-                    data-animation-direction="from-left"
-                    data-animation-delay="250"
+                    className="timeline-gallery-wrapper"
+                    data-aos="fade-left"
                   >
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
@@ -339,11 +343,7 @@ function HomePage() {
                     </div>
                   </div>
 
-                  <div
-                    className="description-wrapper animate-from-bottom animation-from-bottom"
-                    data-animation-direction="from-bottom"
-                    data-animation-delay="250"
-                  >
+                  <div data-aos="fade-right" className="description-wrapper">
                     <div className="description">
                       <div className="neela-style">
                         <span className="h-lines"></span>
@@ -371,8 +371,11 @@ function HomePage() {
                     November 10 2024
                   </span>
                 </div>
-                <div className="gallery-container" data-aos="fade-left">
-                  <div className="timeline-gallery-wrapper ">
+                <div className="gallery-container">
+                  <div
+                    className="timeline-gallery-wrapper"
+                    data-aos="fade-left"
+                  >
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
@@ -385,7 +388,7 @@ function HomePage() {
                     </div>
                   </div>
 
-                  <div className="description-wrapper">
+                  <div className="description-wrapper" data-aos="fade-right">
                     <div className="description">
                       <div className="neela-style">
                         <span className="h-lines"></span>
@@ -493,10 +496,7 @@ function HomePage() {
                 sát cánh hơn trong những ngày tồi tệ.
               </div>
               <ul className="wedding-gifts">
-                <li
-                  data-aos="flip-up"
-                  className="animate-from-bottom animation-from-bottom"
-                >
+                <li data-aos="flip-up">
                   <div className="neela-style">
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
@@ -608,10 +608,7 @@ function HomePage() {
                   </div>
                 </li>
 
-                <li
-                  data-aos="flip-up"
-                  className="animate-from-bottom animation-from-bottom"
-                >
+                <li data-aos="flip-up">
                   <div className="neela-style">
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
