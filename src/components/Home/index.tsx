@@ -14,9 +14,9 @@ const Home = () => {
           <div
             className="zs-slide zs-slide-0 active"
             style={{
-              backgroundImage: `url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/a33b08a813ee02e7a4b7d72ce05d9e93.jpg")`,
+              backgroundImage: `url("src/assets/2T9A6560.jpg")`,
               zIndex: 2,
-              backgroundPosition: "center",
+              backgroundPosition: "20% 20%",
             }}
           ></div>
         </div>
