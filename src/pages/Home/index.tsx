@@ -456,7 +456,7 @@ function HomePage() {
         className="parallax-background section-bg-color"
         style={{
           padding: "135px 0px",
-          backgroundImage: 'url("src/assets/sukiencuoi.jpg")',
+          backgroundImage: 'url("sukiencuoi.jpg")',
           backgroundPosition: "center",
         }}
       >

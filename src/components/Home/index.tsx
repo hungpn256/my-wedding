@@ -14,7 +14,7 @@ const Home = () => {
           <div
             className="zs-slide zs-slide-0 active"
             style={{
-              backgroundImage: `url("src/assets/2T9A6560.jpg")`,
+              backgroundImage: `url("2T9A6560.jpg")`,
               zIndex: 2,
               backgroundPosition: "20% 20%",
             }}

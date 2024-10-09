@@ -41,7 +41,7 @@ const Invitation = () => {
       id="invitation"
       className="parallax-background bg-color-overlay padding-divider-top section-divider-bottom-1"
       style={{
-        backgroundImage: 'url("src/assets/bigday.jpg")',
+        backgroundImage: 'url("bigday.jpg")',
         backgroundPosition: "center 0px",
       }}
     >
