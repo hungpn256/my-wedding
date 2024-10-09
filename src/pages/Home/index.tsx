@@ -11,6 +11,7 @@ import Home from "../../components/Home";
 import Invitation from "../../components/Invitation";
 import RSVP from "../../components/RSVP";
 import Testimonials from "../../components/Testimonials";
+import { ImageConst } from "../../constants/image.constants";
 
 function HomePage() {
   const [audioEl] = useState(new Audio(audio));
@@ -43,7 +44,7 @@ function HomePage() {
             >
               <div className="image">
                 <img
-                  src="https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg"
+                  src={ImageConst.imageGroom}
                   alt=""
                   width="600"
                   height="714"
@@ -59,16 +60,7 @@ function HomePage() {
                       Là một lập trình viên hiện đang công tác tại Rikkeisoft ở
                       Hà Nội. Là một người thông minh và có tư duy sáng tạo. Đặc
                       biệt, anh có tài năng ca hát
-                      <a
-                        className="button-see"
-                        data-src="https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg"
-                        data-content="Là một lập trình viên hiện đang công tác tại Rikkeisoft ở Hà Nội. Là một người thông minh và có tư duy sáng tạo. Đặc biệt, anh có tài năng ca hát, với giọng hát cuốn hút và tình cảm. Bên cạnh công việc và đam mê, anh luôn dành tình yêu và sự quan tâm đặc biệt đến gia đình, coi đó là động lực lớn nhất trong cuộc sống."
-                        data-instagram="https://instagram.com"
-                        data-twitter="https://twitter.com"
-                        data-facebook="https://facebook.com"
-                        data-name="Hoàng Kiến Văn"
-                        style={{ fontSize: "14px", cursor: "pointer" }}
-                      >
+                      <a style={{ fontSize: "14px", cursor: "pointer" }}>
                         Xem thêm<i className="bi bi-arrow-down-short"></i>
                       </a>
                     </p>
@@ -104,7 +96,7 @@ function HomePage() {
             <div className="element col-md-6 col-xl-4 " data-aos="fade-up-left">
               <div className="image flip">
                 <img
-                  src="https://cdn.biihappy.com/ziiweb/default/website/59b631f29bfb9f7cd20437d27ddbe4db.jpeg"
+                  src={ImageConst.imageBride}
                   alt=""
                   width="600"
                   height="714"
@@ -120,16 +112,7 @@ function HomePage() {
                       Cô gái đến từ Mê Linh, hiện đang làm việc và sinh sống tại
                       Hà Nội. Với chiều cao 1m50, cô mang một nét đáng yêu dễ
                       thương khiến ai gặp cũng yêu mến.
-                      <a
-                        className="button-see"
-                        data-src="https://cdn.biihappy.com/ziiweb/default/website/59b631f29bfb9f7cd20437d27ddbe4db.jpeg"
-                        data-content="Cô dâu đến từ Mê Linh, hiện đang làm việc và sinh sống tại Hà Nội. Với chiều cao 1m50, cô mang một nét đáng yêu dễ thương khiến ai gặp cũng yêu mến. Là một người hay cười nhưng lại sống nội tâm, thích trồng cây và yêu thiên nhiên. Ngoài ra còn có niềm đam mê với nấu ăn và thường dành thời gian thử nghiệm những món ăn mới."
-                        data-instagram="https://instagram.com"
-                        data-twitter="https://twitter.com"
-                        data-facebook="https://facebook.com"
-                        data-name="Ngô Việt Hoài"
-                        style={{ fontSize: "14px", cursor: "pointer" }}
-                      >
+                      <a style={{ fontSize: "14px", cursor: "pointer" }}>
                         Xem thêm<i className="bi bi-arrow-down-short"></i>
                       </a>
                     </p>
@@ -239,7 +222,7 @@ function HomePage() {
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
-                          src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg"
+                          src={ImageConst.story1}
                           alt="Bạn có tin vào tình yêu mai mối không?"
                           className="w-100 h-auto"
                           style={{ maxWidth: "500px" }}
@@ -287,7 +270,7 @@ function HomePage() {
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
-                          src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/be48dcf2522cd4ecfa7dab2dd4ebd3f9.jpeg"
+                          src={ImageConst.story2}
                           alt="Lời tỏ tình dễ thương^^"
                           className="w-100 h-auto"
                           style={{ maxWidth: "500px" }}
@@ -334,7 +317,7 @@ function HomePage() {
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
-                          src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/d2d08234dd0ece24828f396fa243a1ec.jpeg"
+                          src={ImageConst.story3}
                           alt="Phút giây cầu hôn"
                           className="w-100 h-auto"
                           style={{ maxWidth: "500px" }}
@@ -379,7 +362,7 @@ function HomePage() {
                     <div className="timeline-gallery-del">
                       <div className="item text-center">
                         <img
-                          src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/d37c077f9ad6b076bc531b2d6ba44498.jpeg"
+                          src={ImageConst.story4}
                           alt="Ngày lễ đính hôn"
                           className="w-100 h-auto"
                           style={{ maxWidth: "500px" }}
@@ -473,8 +456,7 @@ function HomePage() {
         className="parallax-background section-bg-color"
         style={{
           padding: "135px 0px",
-          backgroundImage:
-            'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/f948a8ba806986c08dd4ce1d6e9f8066.jpg")',
+          backgroundImage: 'url("src/assets/sukiencuoi.jpg")',
           backgroundPosition: "center",
         }}
       >

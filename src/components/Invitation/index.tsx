@@ -41,9 +41,8 @@ const Invitation = () => {
       id="invitation"
       className="parallax-background bg-color-overlay padding-divider-top section-divider-bottom-1"
       style={{
-        backgroundImage:
-          'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/10896c191ff2008ed9d07a3ed53616e4.jpg")',
-        backgroundPosition: "center 162px",
+        backgroundImage: 'url("src/assets/bigday.jpg")',
+        backgroundPosition: "center 0px",
       }}
     >
       <div className="section-divider-top-1 off-section"></div>
