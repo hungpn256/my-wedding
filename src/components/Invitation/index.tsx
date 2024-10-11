@@ -1,4 +1,5 @@
 import { memo, useEffect, useState } from "react";
+import OrderSongModal from "../OrderSongModal";
 
 const Invitation = () => {
   const calculateTimeLeft = () => {
@@ -35,6 +36,8 @@ const Invitation = () => {
 
     return () => clearInterval(timer); // Dọn dẹp bộ đếm
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section
@@ -92,9 +95,7 @@ const Invitation = () => {
                   </a>
                 </div>
                 <div className="center m-0">
-                  <a
-                    href="https://preview.iwedding.info/rsvp"
-                    target="_blank"
+                  <div
                     rel="noopener noreferrer"
                     className="btn btn-primary reverse text-white px-2 mt-2"
                     style={{
@@ -102,12 +103,17 @@ const Invitation = () => {
                       maxWidth: "240px",
                       width: "255px",
                     }}
+                    onClick={() => setIsOpen(true)}
                   >
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
-                    Xác nhận tham dự
-                  </a>
+                    Đăng ký bài hát
+                  </div>
                 </div>
+                <OrderSongModal
+                  isOpen={isOpen}
+                  onClose={() => setIsOpen(false)}
+                />
                 <div className="date">10 Tháng 11 2024</div>
                 <div className="count-down-clock">
                   <div
