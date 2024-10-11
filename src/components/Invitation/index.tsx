@@ -92,7 +92,8 @@ const Invitation = () => {
                   </a>
                 </div>
                 <div className="center m-0">
-                  <div
+                  <a
+                    href="#order-song"
                     rel="noopener noreferrer"
                     className="btn btn-primary reverse text-white px-2 mt-2"
                     style={{
@@ -104,7 +105,7 @@ const Invitation = () => {
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
                     Đăng ký bài hát
-                  </div>
+                  </a>
                 </div>
                 <div className="date">10 Tháng 11 2024</div>
                 <div className="count-down-clock">

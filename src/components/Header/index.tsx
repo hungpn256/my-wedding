@@ -89,8 +89,8 @@ const Header = () => {
                 </a>
               </li>
               <li className="menu-item">
-                <a className="menu-item-link" href="#bridesmaids">
-                  Phù Dâu & Phù Rể
+                <a className="menu-item-link" href="#order-song">
+                  Đăng ký bài hát
                 </a>
               </li>
               <li className="menu-item">

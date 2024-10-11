@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from "../../App";
+import React, { useState } from "react";
 import { axiosClient } from "../../services/axiosClient";
+import Spin from "../Spin";
 import "./style.css";
 
 interface Video {
@@ -16,9 +16,9 @@ interface Video {
 
 const OrderSong: React.FC = () => {
   const [query, setQuery] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
   const [videos, setVideos] = useState<Video[]>([]);
   // const [selectedSong, setSelectedSong] = useState<Video | null>(null);
-  const { setLoading } = useContext(AppContext);
 
   // Hàm tìm kiếm video từ YouTube
   const handleSearch = async () => {
@@ -28,7 +28,7 @@ const OrderSong: React.FC = () => {
       setLoading?.(true);
       const response = await axiosClient.get("/api/search", {
         params: {
-          query: query,
+          query: `karaoke ${query}`,
         },
       });
       setVideos(response.data.data.items);
@@ -87,34 +87,38 @@ const OrderSong: React.FC = () => {
               Search
             </div>
           </div>
-          <div className="row g-5 justify-content-center" data-aos="fade-up">
-            {videos.map((video) => {
-              return (
-                <div
-                  key={video.id.videoId}
-                  className="col-md-12 col-lg-10 col-xl-6"
-                >
+          {loading ? (
+            <Spin />
+          ) : (
+            <div className="row g-5 justify-content-center" data-aos="fade-up">
+              {videos.map((video) => {
+                return (
                   <div
-                    className="invite neela-style animate-from-left animation-from-left"
-                    data-animation-direction="from-left"
-                    data-animation-delay="100"
+                    key={video.id.videoId}
+                    className="col-md-12 col-lg-10 col-xl-6"
                   >
-                    <span className="h-lines"></span>
-                    <span className="v-lines"></span>
-                    <iframe
-                      className="border border-5 border-white w-100"
-                      style={{
-                        width: "100%",
-                        aspectRatio: "16/9",
-                      }}
-                      src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                      allowFullScreen
-                    ></iframe>
+                    <div
+                      className="invite neela-style animate-from-left animation-from-left"
+                      data-animation-direction="from-left"
+                      data-animation-delay="100"
+                    >
+                      <span className="h-lines"></span>
+                      <span className="v-lines"></span>
+                      <iframe
+                        className="border border-5 border-white w-100"
+                        style={{
+                          width: "100%",
+                          aspectRatio: "16/9",
+                        }}
+                        src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>
