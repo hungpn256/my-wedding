@@ -1,6 +1,6 @@
-import axios from "axios";
-import React, { useState } from "react";
-import Modal from "react-modal";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../../App";
+import { axiosClient } from "../../services/axiosClient";
 import "./style.css";
 
 interface Video {
@@ -11,40 +11,35 @@ interface Video {
   };
 }
 
-interface OrderSongModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 // Cấu hình Modal
 // Modal.setAppElement("#root");
 
-const OrderSongModal: React.FC<OrderSongModalProps> = ({ isOpen, onClose }) => {
+const OrderSong: React.FC = () => {
   const [query, setQuery] = useState<string>("");
   const [videos, setVideos] = useState<Video[]>([]);
   const [selectedSong, setSelectedSong] = useState<Video | null>(null);
-
-  const API_KEY = "YOUR_YOUTUBE_API_KEY";
+  const { setLoading } = useContext(AppContext);
 
   // Hàm tìm kiếm video từ YouTube
   const handleSearch = async () => {
     if (!query) return;
+    setVideos([]);
     try {
-      const response = await axios.get(
-        "https://www.googleapis.com/youtube/v3/search",
-        {
-          params: {
-            part: "snippet",
-            q: query,
-            key: API_KEY,
-            type: "video",
-            maxResults: 5,
-          },
-        }
+      setLoading?.(true);
+      const response = await axiosClient.get("/api/search", {
+        params: {
+          query: query,
+        },
+      });
+      console.log(
+        "🚀 ~ handleSearch ~ response.data.items:",
+        response.data.items
       );
-      setVideos(response.data.items);
+      setVideos(response.data.data.items);
     } catch (error) {
       console.error("Error fetching YouTube data:", error);
+    } finally {
+      setLoading?.(false);
     }
   };
 
@@ -56,71 +51,79 @@ const OrderSongModal: React.FC<OrderSongModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
-      contentLabel="Order Song Modal"
-      className="modal"
+    <section
+      id="order-song"
+      className="parallax-background bg-color-overlay"
+      style={{
+        backgroundImage:
+          'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/98b3fc1637903e6b4265215b475fe2ad.jpg")',
+        backgroundPosition: "center 138px",
+      }}
     >
-      <div className="row" data-aos="fade-down">
-        <div className="col-sm-12">
-          <h1 className="section-title">Đăng ký bài hát</h1>
-        </div>
-      </div>
-      <div className="modal-search">
-        <input
-          type="text"
-          className="modal-input"
-          placeholder="Search for a song..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <div
-          rel="noopener noreferrer"
-          className="btn btn-primary px-2 mt-2"
-          style={{
-            minWidth: "240px",
-            maxWidth: "240px",
-            width: "255px",
-          }}
-        >
-          <span className="h-lines"></span>
-          <span className="v-lines"></span>
-          Search
-        </div>
-      </div>
-
-      {/* Hiển thị kết quả tìm kiếm */}
-      <div className="modal-video-list">
-        {videos.map((video) => (
-          <div key={video.id.videoId} className="modal-video-item">
-            <h3 className="video-title">{video.snippet.title}</h3>
-            <iframe
-              className="video-frame"
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${video.id.videoId}`}
-              title={video.snippet.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <button
-              className="modal-button order-button"
-              onClick={() => handleOrderSong(video)}
-            >
-              Order this Song
-            </button>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12" data-aos="fade-up">
+            <h2 className="section-title light">Đăng ký bài hát</h2>
           </div>
-        ))}
+        </div>
+        <div className="row center">
+          <div className="modal-search">
+            <div className="mt-3 w-100">
+              <input
+                type="text"
+                name="name"
+                placeholder="Tên bài hát*"
+                className="form-control"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </div>
+            <div
+              rel="noopener noreferrer"
+              className="btn btn-primary text-white px-2"
+              style={{
+                width: "100px",
+                borderColor: "white",
+              }}
+              onClick={handleSearch}
+            >
+              <span className="h-lines"></span>
+              <span className="v-lines"></span>
+              Search
+            </div>
+          </div>
+          <div className="row g-5 justify-content-center" data-aos="fade-up">
+            {videos.map((video) => {
+              return (
+                <div
+                  key={video.id.videoId}
+                  className="col-md-12 col-lg-10 col-xl-6"
+                >
+                  <div
+                    className="invite neela-style animate-from-left animation-from-left"
+                    data-animation-direction="from-left"
+                    data-animation-delay="100"
+                  >
+                    <span className="h-lines"></span>
+                    <span className="v-lines"></span>
+                    <iframe
+                      className="border border-5 border-white w-100"
+                      style={{
+                        width: "100%",
+                        aspectRatio: "16/9",
+                      }}
+                      src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-
-      {/* Nút đóng modal */}
-      <button onClick={onClose} className="modal-close">
-        X
-      </button>
-    </Modal>
+    </section>
   );
 };
 
-export default OrderSongModal;
+export default OrderSong;

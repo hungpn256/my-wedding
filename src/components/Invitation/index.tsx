@@ -1,5 +1,4 @@
 import { memo, useEffect, useState } from "react";
-import OrderSongModal from "../OrderSongModal";
 
 const Invitation = () => {
   const calculateTimeLeft = () => {
@@ -36,8 +35,6 @@ const Invitation = () => {
 
     return () => clearInterval(timer); // Dọn dẹp bộ đếm
   }, []);
-
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section
@@ -110,10 +107,6 @@ const Invitation = () => {
                     Đăng ký bài hát
                   </div>
                 </div>
-                <OrderSongModal
-                  isOpen={isOpen}
-                  onClose={() => setIsOpen(false)}
-                />
                 <div className="date">10 Tháng 11 2024</div>
                 <div className="count-down-clock">
                   <div

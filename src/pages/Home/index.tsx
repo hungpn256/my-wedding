@@ -4,11 +4,11 @@ import Heart from "../../assets/heart.svg";
 import Donate from "../../components/Donate";
 import Footer from "../../components/Footer";
 import GalleryImage from "../../components/Gallery";
-import Groomsmen from "../../components/Groomsmen";
 import Header from "../../components/Header";
 import HeartFalling from "../../components/HeartFalling";
 import Home from "../../components/Home";
 import Invitation from "../../components/Invitation";
+import OrderSong from "../../components/OrderSongModal";
 import RSVP from "../../components/RSVP";
 import Testimonials from "../../components/Testimonials";
 import { ImageConst } from "../../constants/image.constants";
@@ -708,98 +708,8 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section
-        id="bridesmaids"
-        className="parallax-background bg-color-overlay"
-        style={{
-          backgroundImage:
-            'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/98b3fc1637903e6b4265215b475fe2ad.jpg")',
-          backgroundPosition: "center 138px",
-        }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12" data-aos="fade-up">
-              <h2 className="section-title light">Phù dâu</h2>
-            </div>
-          </div>
-          <div className="row center">
-            <div
-              className="element bmaid-gmen col-sm-6 col-lg-4"
-              data-aos="fade-right"
-            >
-              <div className="image">
-                <img
-                  src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/fa1780c6fe429eff4f2d564d6fbaff98.jpeg"
-                  alt=""
-                  width="434"
-                  height="434"
-                />
-                <div className="hover-info neela-style">
-                  <span className="h-lines"></span>
-                  <span className="v-lines"></span>
-                  <div className="content center">
-                    <h3>
-                      Lý Mạc Sầu<small>Phù dâu</small>
-                    </h3>
-                    <p>
-                      Là cô gái đến từ vùng đất Cố Đô “Huế mộng Huế mơ” dịu
-                      dàng, nết na và thùy mị. Với nhiều tài lẻ như ...
-                      <a
-                        className="button-see"
-                        data-src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/fa1780c6fe429eff4f2d564d6fbaff98.jpeg"
-                        data-content="Là cô gái đến từ vùng đất Cố Đô “Huế mộng Huế mơ” dịu dàng, nết na và thùy mị. Với nhiều tài lẻ như biết nấu ăn, cắm hoa, thêu thùa may vá."
-                        style={{ fontSize: "14px", cursor: "pointer" }}
-                      >
-                        Xem thêm
-                        <i className="bi bi-arrow-down-short"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="element bmaid-gmen col-sm-6 col-lg-4"
-              data-aos="fade-left"
-            >
-              <div className="image">
-                <img
-                  src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/84729db4c190b37df0a2cdcedba3f9b2.jpeg"
-                  alt=""
-                  width="434"
-                  height="434"
-                />
-                <div className="hover-info neela-style">
-                  <span className="h-lines"></span>
-                  <span className="v-lines"></span>
-                  <div className="content center">
-                    <h3>
-                      Phạm Ðoan Trang<small>Phù dâu</small>
-                    </h3>
-                    <p>
-                      Là cô gái gái Huế thân thiện, hay cười, dễ giao tiếp nhưng
-                      thích yên tĩnh một mình. Thường hướng về những thói quen,
-                      sở thích mang tính truyền thống.
-                      <a
-                        className="button-see"
-                        data-src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/84729db4c190b37df0a2cdcedba3f9b2.jpeg"
-                        data-content="Là cô gái gái Huế thân thiện, hay cười, dễ giao tiếp nhưng thích yên tĩnh một mình. Thường hướng về những thói quen, sở thích mang tính truyền thống."
-                        style={{ fontSize: "14px", cursor: "pointer" }}
-                      >
-                        Xem thêm
-                        <i className="bi bi-arrow-down-short"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <OrderSong />
       <Testimonials />
-      <Groomsmen />
       <RSVP />
       <Donate />
       <Footer />
