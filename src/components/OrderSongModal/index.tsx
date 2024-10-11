@@ -17,7 +17,7 @@ interface Video {
 const OrderSong: React.FC = () => {
   const [query, setQuery] = useState<string>("");
   const [videos, setVideos] = useState<Video[]>([]);
-  const [selectedSong, setSelectedSong] = useState<Video | null>(null);
+  // const [selectedSong, setSelectedSong] = useState<Video | null>(null);
   const { setLoading } = useContext(AppContext);
 
   // Hàm tìm kiếm video từ YouTube
@@ -31,10 +31,6 @@ const OrderSong: React.FC = () => {
           query: query,
         },
       });
-      console.log(
-        "🚀 ~ handleSearch ~ response.data.items:",
-        response.data.items
-      );
       setVideos(response.data.data.items);
     } catch (error) {
       console.error("Error fetching YouTube data:", error);
@@ -44,11 +40,10 @@ const OrderSong: React.FC = () => {
   };
 
   // Hàm chọn bài hát
-  const handleOrderSong = (video: Video) => {
-    setSelectedSong(video);
-    console.log("Ordered Song:", video);
-    onClose();
-  };
+  // const handleOrderSong = (video: Video) => {
+  //   setSelectedSong(video);
+  //   console.log("Ordered Song:", video);
+  // };
 
   return (
     <section

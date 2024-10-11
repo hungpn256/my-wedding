@@ -100,7 +100,6 @@ const Invitation = () => {
                       maxWidth: "240px",
                       width: "255px",
                     }}
-                    onClick={() => setIsOpen(true)}
                   >
                     <span className="h-lines"></span>
                     <span className="v-lines"></span>
