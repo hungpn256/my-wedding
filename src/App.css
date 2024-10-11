@@ -3106,13 +3106,13 @@ p.center {
 .invite.neela-style .h-lines {
   border-top-color: #fff;
   border-bottom-color: #fff;
-  z-index: 0;
+  z-index: -1;
 }
 
 .invite.neela-style .v-lines {
   border-left-color: #fff;
   border-right-color: #fff;
-  z-index: 0;
+  z-index: -1;
 }
 
 .invite .invite_title {
