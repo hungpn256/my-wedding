@@ -413,8 +413,7 @@ function HomePage() {
         id="video"
         className="parallax-background bg-color-overlay padding-divider-top"
         style={{
-          backgroundImage:
-            'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/d4f33748bf87fde12d34aa8146e57b4c.jpg")',
+          backgroundImage: 'url("2T9A6537.jpg")',
           backgroundPosition: "center -134px",
         }}
       >
@@ -526,65 +525,6 @@ function HomePage() {
                             Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội
                           </strong>
                         </p>
-                      </div>
-                    </div>
-                    <div className="info">
-                      <div
-                        className="calendar-button"
-                        style={{
-                          visibility: "hidden",
-                          height: "0",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <div
-                          className="atcb-initialized"
-                          style={{ display: "block" }}
-                        >
-                          <script type="application/ld+json">
-                            {JSON.stringify({
-                              "@context": "https://schema.org",
-                              "@type": "Event",
-                              name: "LỄ CƯỚI NHÀ NỮ (Đám cưới Kiến Văn và Việt Hoài)",
-                              description:
-                                "Cảm ơn bạn đã dành thời gian tham dự đám cưới của chúng tôi!. Thông tin chi tiết xem tại website: https://preview.iwedding.info",
-                              startDate: "2023-02-10T07:30:00+07:00",
-                              duration: "00:00",
-                              location:
-                                "123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng",
-                              endDate: "2023-02-10T07:30:00+07:00",
-                              image: [
-                                "https://add-to-calendar-button.com/demo_assets/img/1x1.png",
-                                "https://add-to-calendar-button.com/demo_assets/img/4x3.png",
-                                "https://add-to-calendar-button.com/demo_assets/img/16x9.png",
-                              ],
-                            })}
-                          </script>
-                          <div
-                            className="atcb-button-wrapper atcb-light"
-                            style={{
-                              fontSize: 16,
-                            }}
-                          >
-                            <button
-                              className="atcb-button atcb-click"
-                              type="button"
-                              id="atcb-btn-1"
-                            >
-                              <span className="atcb-icon">
-                                <span className="atcb-icon-trigger">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 200 200.016"
-                                  >
-                                    <path d="M132.829 7.699c0-4.248 4.199-7.699 9.391-7.699s9.391 3.451 9.391 7.699v33.724c0 4.248-4.199 7.699-9.391 7.699s-9.391-3.451-9.391-7.699zm-5.941 123.747c2.979 0 5.404 2.425 5.404 5.404s-2.425 5.404-5.404 5.404l-21.077-.065-.065 21.045c0 2.979-2.425 5.404-5.404 5.404s-5.404-2.425-5.404-5.404l.065-21.061-21.045-.081c-2.979 0-5.404-2.425-5.404-5.404s2.425-5.404 5.404-5.404l21.061.065.065-21.045c0-2.979 2.425-5.404 5.404-5.404s5.404 2.425 5.404 5.404l-.065 21.077 21.061.065zM48.193 7.699C48.193 3.451 52.393 0 57.585 0s9.391 3.451 9.391 7.699v33.724c0 4.248-4.199 7.699-9.391 7.699s-9.391-3.451-9.391-7.699zM10.417 73.763h179.167V34.945c0-1.302-.537-2.49-1.4-3.369-.863-.863-2.051-1.4-3.369-1.4h-17.171c-2.881 0-5.208-2.327-5.208-5.208s2.327-5.208 5.208-5.208h17.171c4.183 0 7.975 1.709 10.726 4.46S200 30.762 200 34.945v44.043 105.843c0 4.183-1.709 7.975-4.46 10.726s-6.543 4.46-10.726 4.46H15.186c-4.183 0-7.975-1.709-10.726-4.46C1.709 192.79 0 188.997 0 184.814V78.988 34.945c0-4.183 1.709-7.975 4.46-10.726s6.543-4.46 10.726-4.46h18.343c2.881 0 5.208 2.327 5.208 5.208s-2.327 5.208-5.208 5.208H15.186c-1.302 0-2.49.537-3.369 1.4-.863.863-1.4 2.051-1.4 3.369zm179.167 10.433H10.417v100.618c0 1.302.537 2.49 1.4 3.369.863.863 2.051 1.4 3.369 1.4h169.629c1.302 0 2.49-.537 3.369-1.4.863-.863 1.4-2.051 1.4-3.369zM82.08 30.176c-2.644 0-5.204.787-7.418 2.286l-51.006 36.411c-1.21.873-2.12 2.055-2.56 3.418-.441 1.366-.335 2.86.291 4.148.609 1.26 1.691 2.303 3.016 2.994l57.295 27.993c.745.367 1.553.545 2.356.545s1.606-.178 2.351-.545c.743-.367 1.329-.869 1.759-1.496 1.29-1.627 1.895-3.677 1.893-5.773v-41.12c0-2.764-1.31-5.451-3.556-7.189s-5.078-2.941-8.04-2.941zm26.01 20.156v21.621c0 .748-.188 1.511-.53 2.145-.34.628-.832 1.166-1.432 1.607l-19.931 14.177c-.262.188-.577.287-.883.287-.291 0-.572-.073-.83-.214-.484-.232-.932-.554-1.331-.93l-11.367-8.208c-1.238-.9-2.095-2.228-2.422-3.779-.355-1.538-.257-3.173.258-4.644.481-1.647 1.345-3.108 2.51-4.425l19.414-20.406c.838-.888 1.939-1.453 3.153-1.629 1.22-.169 2.438.267 3.39 1.197.968.933 1.511 2.211 1.577 3.507zM125.315 107.372l-37.267-18.596-37.132 27.357v30.417l37.13-27.36 37.269 18.596v-30.417z" />
-                                  </svg>
-                                </span>
-                                <span className="atcb-text">Thêm vào Lịch</span>
-                              </span>
-                            </button>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>

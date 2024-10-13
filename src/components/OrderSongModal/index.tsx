@@ -50,8 +50,7 @@ const OrderSong: React.FC = () => {
       id="order-song"
       className="parallax-background bg-color-overlay"
       style={{
-        backgroundImage:
-          'url("https://cdn.biihappy.com/ziiweb/default/template/644000ba4f8e0c7ddf09c709/98b3fc1637903e6b4265215b475fe2ad.jpg")',
+        backgroundImage: 'url("2T9A6402.jpg")',
         backgroundPosition: "center 138px",
       }}
     >
@@ -96,12 +95,9 @@ const OrderSong: React.FC = () => {
                   <div
                     key={video.id.videoId}
                     className="col-md-12 col-lg-10 col-xl-6"
+                    data-aos="fade-up"
                   >
-                    <div
-                      className="invite neela-style animate-from-left animation-from-left"
-                      data-animation-direction="from-left"
-                      data-animation-delay="100"
-                    >
+                    <div className="invite neela-style">
                       <span className="h-lines"></span>
                       <span className="v-lines"></span>
                       <iframe
@@ -113,6 +109,38 @@ const OrderSong: React.FC = () => {
                         src={`https://www.youtube.com/embed/${video.id.videoId}`}
                         allowFullScreen
                       ></iframe>
+                    </div>
+                    <div
+                      className="btn btn-primary text-white px-2"
+                      style={{
+                        borderColor: "white",
+                      }}
+                      onClick={() => {
+                        window.open(
+                          "https://m.me/61566899140002?ref=yourCustomText",
+                          "_blank"
+                        );
+                      }}
+                    >
+                      <span className="h-lines"></span>
+                      <span className="v-lines"></span>
+                      Gửi tặng nhà trai
+                    </div>
+                    <div
+                      className="btn btn-primary text-white px-2"
+                      style={{
+                        borderColor: "white",
+                      }}
+                      onClick={() => {
+                        window.open(
+                          "https://m.me/61566899140002?ref=yourCustomText",
+                          "_blank"
+                        );
+                      }}
+                    >
+                      <span className="h-lines"></span>
+                      <span className="v-lines"></span>
+                      Gửi tặng nhà gái
                     </div>
                   </div>
                 );

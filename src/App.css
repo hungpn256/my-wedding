@@ -6905,7 +6905,7 @@ textarea.form-control {
 
   .invite {
     flex-direction: column;
-    margin: 25px 25px 60px;
+    margin: 0 0 25px;
   }
 
   .invite .invite_title {
