@@ -117,7 +117,7 @@ const OrderSong: React.FC = () => {
                       }}
                       onClick={() => {
                         window.open(
-                          "https://m.me/61566899140002?ref=yourCustomText",
+                          "https://m.me/Kendz256?ref=yourCustomText",
                           "_blank"
                         );
                       }}
@@ -133,7 +133,7 @@ const OrderSong: React.FC = () => {
                       }}
                       onClick={() => {
                         window.open(
-                          "https://m.me/61566899140002?ref=yourCustomText",
+                          "https://m.me/ha.thu0104?ref=yourCustomText",
                           "_blank"
                         );
                       }}
