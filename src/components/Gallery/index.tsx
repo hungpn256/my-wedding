@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions, Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
@@ -13,6 +13,40 @@ function GalleryImage() {
   const [index, setIndex] = useState(-1);
 
   const handleClick = (index: number) => setIndex(index);
+  const GalleryMemo = useMemo(() => {
+    return (
+      <Gallery
+        images={images}
+        onClick={handleClick}
+        enableImageSelection={false}
+        rowHeight={300}
+        thumbnailImageComponent={(i) => (
+          <img
+            data-aos="flip-left"
+            style={{
+              objectFit: "cover",
+              background: "#000",
+              width: "100%",
+              height: "100%",
+            }}
+            src={i.item.src}
+          />
+        )}
+      />
+    );
+  }, []);
+
+  const LightBoxMemo = useMemo(() => {
+    return (
+      <Lightbox
+        slides={slides}
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        plugins={[Captions, Fullscreen, Zoom]}
+      />
+    );
+  }, [index]);
 
   return (
     <section id="gallery">
@@ -36,31 +70,8 @@ function GalleryImage() {
       <div className="container">
         <div className="row" data-aos="fade-up">
           <div className="col col-xs-12">
-            <Gallery
-              images={images}
-              onClick={handleClick}
-              enableImageSelection={false}
-              rowHeight={300}
-              thumbnailImageComponent={(i) => (
-                <img
-                  data-aos="flip-left"
-                  style={{
-                    objectFit: "cover",
-                    background: "#000",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  src={i.item.src}
-                />
-              )}
-            />
-            <Lightbox
-              slides={slides}
-              open={index >= 0}
-              index={index}
-              close={() => setIndex(-1)}
-              plugins={[Captions, Fullscreen, Zoom]}
-            />
+            {GalleryMemo}
+            {LightBoxMemo}
           </div>
         </div>
       </div>
