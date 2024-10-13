@@ -42,7 +42,7 @@ const Invitation = () => {
       className="parallax-background bg-color-overlay padding-divider-top section-divider-bottom-1"
       style={{
         backgroundImage: 'url("bigday.jpg")',
-        backgroundPosition: "center 0px",
+        backgroundPosition: "center -50px",
       }}
     >
       <div className="section-divider-top-1 off-section"></div>
