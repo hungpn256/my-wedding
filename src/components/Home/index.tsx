@@ -11,14 +11,16 @@ const Home = () => {
     >
       <div className="zs-slideshow bg-pain">
         <div className="zs-slides">
-          <div
+          <img
             className="zs-slide zs-slide-0 active"
             style={{
-              backgroundImage: `url("2T9A6560.jpg")`,
               zIndex: 2,
               backgroundPosition: "20% 20%",
+              objectFit: "cover",
+              objectPosition: "20% 20%",
             }}
-          ></div>
+            src="compressor/2T9A6560.jpg"
+          ></img>
         </div>
       </div>
       <div className="container" style={{ zIndex: 2, marginTop: "96.0705px" }}>

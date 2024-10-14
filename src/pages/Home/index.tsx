@@ -413,7 +413,7 @@ function HomePage() {
         id="video"
         className="parallax-background bg-color-overlay padding-divider-top"
         style={{
-          backgroundImage: 'url("2T9A6537.jpg")',
+          backgroundImage: 'url("compressor/2T9A6537.jpg")',
           backgroundPosition: "center -134px",
         }}
       >
@@ -427,11 +427,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div
-            className="invite neela-style animate-from-left animation-from-left"
-            data-animation-direction="from-left"
-            data-animation-delay="100"
-          >
+          <div className="invite neela-style">
             <span className="h-lines"></span>
             <span className="v-lines"></span>
             <div className="ratio ratio-16x9">
@@ -455,7 +451,7 @@ function HomePage() {
         className="parallax-background section-bg-color"
         style={{
           padding: "135px 0px",
-          backgroundImage: 'url("sukiencuoi.jpg")',
+          backgroundImage: 'url("compressor/2T9A6732.jpg")',
           backgroundPosition: "center",
         }}
       >

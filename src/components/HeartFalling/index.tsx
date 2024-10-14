@@ -3,7 +3,7 @@ import { memo, useEffect } from "react";
 const HeartFalling = () => {
   useEffect(() => {
     const heartManager = document.getElementById("manage-heart");
-    const maxHeart = 15;
+    const maxHeart = 10;
     for (let i = 0; i < maxHeart; i++) {
       const heartCopy = document.createElement("span");
       heartCopy.classList.add("heart-falling");

@@ -1,5 +1,7 @@
 import { memo, useMemo, useState } from "react";
 import { Gallery } from "react-grid-gallery";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions, Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -13,6 +15,7 @@ function GalleryImage() {
   const [index, setIndex] = useState(-1);
 
   const handleClick = (index: number) => setIndex(index);
+
   const GalleryMemo = useMemo(() => {
     return (
       <Gallery
@@ -21,15 +24,16 @@ function GalleryImage() {
         enableImageSelection={false}
         rowHeight={300}
         thumbnailImageComponent={(i) => (
-          <img
-            data-aos="flip-left"
+          <LazyLoadImage
             style={{
               objectFit: "cover",
-              background: "#000",
               width: "100%",
               height: "100%",
+              cursor: "pointer",
             }}
+            className="lazy-load-image"
             src={i.item.src}
+            effect="blur"
           />
         )}
       />
@@ -47,6 +51,8 @@ function GalleryImage() {
       />
     );
   }, [index]);
+
+  console.log("load");
 
   return (
     <section id="gallery">
@@ -68,7 +74,7 @@ function GalleryImage() {
       </div>
 
       <div className="container">
-        <div className="row" data-aos="fade-up">
+        <div className="row">
           <div className="col col-xs-12">
             {GalleryMemo}
             {LightBoxMemo}

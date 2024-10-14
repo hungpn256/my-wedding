@@ -50,7 +50,7 @@ const OrderSong: React.FC = () => {
       id="order-song"
       className="parallax-background bg-color-overlay"
       style={{
-        backgroundImage: 'url("2T9A5900.jpg")',
+        backgroundImage: 'url("compressor/2T9A5900.jpg")',
         backgroundPosition: "center -200px",
       }}
     >
