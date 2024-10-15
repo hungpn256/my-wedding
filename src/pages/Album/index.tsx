@@ -3,14 +3,14 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { imageFull } from "../../components/Gallery/images";
 
 const Album = () => {
-  console.log(123);
-
   return (
     <ImageGallery
       items={imageFull}
       lazyLoad
       showThumbnails
-      thumbnailPosition="left"
+      thumbnailPosition={
+        window.innerWidth > window.innerHeight ? "left" : "bottom"
+      }
       infinite={false}
     />
   );
