@@ -1,12 +1,12 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createContext, lazy, useEffect, useState } from "react";
+import { createContext, lazy, Suspense, useEffect, useState } from "react";
 import { useRoutes } from "react-router-dom";
 import "./App.css";
 import Loading from "./components/Loading";
 const HomePage = lazy(() => import("./pages/Home"));
-const AlbumPage = lazy(() => import("./pages/Album"));
+const Album = lazy(() => import("./pages/Album"));
 
 export const AppContext = createContext<{
   loading?: boolean;
@@ -30,14 +30,14 @@ function App() {
     },
     {
       path: "/album",
-      element: <AlbumPage />,
+      element: <Album />,
     },
   ]);
 
   return (
     <div>
       <AppContext.Provider value={{ loading, setLoading }}>
-        {routers}
+        <Suspense fallback={<div>Loading...</div>}>{routers}</Suspense>
         {loading && <Loading />}
       </AppContext.Provider>
     </div>

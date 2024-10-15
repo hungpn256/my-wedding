@@ -17,8 +17,6 @@ const slides = images.map(({ original }) => ({
 function GalleryImage() {
   const [index, setIndex] = useState(-1);
 
-  const handleClick = (index: number) => setIndex(index);
-
   const GalleryMemo = useMemo(() => {
     return (
       <div className="row g-5 mt-5">
@@ -78,10 +76,8 @@ function GalleryImage() {
       <div className="container">
         <div className="row">
           <div className="col col-xs-12">
-            <LazyLoadComponent>
-              {GalleryMemo}
-              {LightBoxMemo}
-            </LazyLoadComponent>
+            {GalleryMemo}
+            {LightBoxMemo}
           </div>
         </div>
       </div>

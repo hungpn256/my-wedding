@@ -1,49 +1,52 @@
-import { Image } from "react-grid-gallery";
-
-export interface CustomImage extends Image {
-  original: string;
-}
-
-// const imageSrcs = [
-//   "2T9A5781.jpg",
-//   "2T9A5799.jpg",
-//   "2T9A5835.jpg",
-//   "2T9A5867.jpg",
-//   "2T9A5900.jpg",
-//   "2T9A5958.jpg",
-//   "2T9A5984.jpg",
-//   "2T9A6019.jpg",
-//   "2T9A6042.jpg",
-//   "2T9A6052.jpg",
-//   "2T9A6072.jpg",
-//   "2T9A6088.jpg",
-//   "2T9A6112.jpg",
-//   "2T9A6137.jpg",
-//   "2T9A6191.jpg",
-//   "2T9A6251.jpg",
-//   "2T9A6258.jpg",
-//   "2T9A6336.jpg",
-//   "2T9A6342.jpg",
-//   "2T9A6359.jpg",
-//   "2T9A6369.jpg",
-//   "2T9A6383.jpg",
-//   "2T9A6402.jpg",
-//   "2T9A6463.jpg",
-//   "2T9A6510.jpg",
-//   "2T9A6519.jpg",
-//   "2T9A6556.jpg",
-//   "2T9A6560.jpg",
-//   "2T9A6601.jpg",
-//   "2T9A6655.jpg",
-//   "2T9A6667.jpg",
-//   "2T9A6732.jpg",
-//   "2T9A6772.jpg",
-//   "2T9A6835.jpg",
-// ];
+export const imageSrcFull = [
+  "2T9A5781.jpg",
+  "2T9A5799.jpg",
+  "2T9A5835.jpg",
+  "2T9A5867.jpg",
+  "2T9A5900.jpg",
+  "2T9A5958.jpg",
+  "2T9A5984.jpg",
+  "2T9A6019.jpg",
+  "2T9A6042.jpg",
+  "2T9A6052.jpg",
+  "2T9A6072.jpg",
+  "2T9A6088.jpg",
+  "2T9A6112.jpg",
+  "2T9A6137.jpg",
+  "2T9A6191.jpg",
+  "2T9A6251.jpg",
+  "2T9A6258.jpg",
+  "2T9A6336.jpg",
+  "2T9A6342.jpg",
+  "2T9A6359.jpg",
+  "2T9A6369.jpg",
+  "2T9A6383.jpg",
+  "2T9A6402.jpg",
+  "2T9A6463.jpg",
+  "2T9A6510.jpg",
+  "2T9A6519.jpg",
+  "2T9A6556.jpg",
+  "2T9A6560.jpg",
+  "2T9A6601.jpg",
+  "2T9A6655.jpg",
+  "2T9A6667.jpg",
+  "2T9A6732.jpg",
+  "2T9A6772.jpg",
+  "2T9A6835.jpg",
+];
 
 const imageSrcs = ["2T9A5799.jpg", "2T9A6042.jpg"];
 
-export const images: CustomImage[] = imageSrcs.map((item) => {
+export const imageFull = imageSrcFull.map((item) => {
+  return {
+    thumbnail: `compressor/${item}`,
+    original: `compressor/${item}`,
+    // width: 400,
+    // height: 600,
+  };
+});
+
+export const images = imageSrcs.map((item) => {
   return {
     src: `compressor/${item}`,
     original: `compressor/${item}`,
