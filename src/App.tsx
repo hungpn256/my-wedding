@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <AppContext.Provider value={{ loading, setLoading }}>
-        <Suspense fallback={<div>Loading...</div>}>{routers}</Suspense>
+        <Suspense fallback={<Loading />}>{routers}</Suspense>
         {loading && <Loading />}
       </AppContext.Provider>
     </div>
