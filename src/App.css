@@ -645,7 +645,6 @@ p.center {
 .btn:focus,
 .btn:hover {
   background: 0 0;
-  border-color: #8eaeba;
   color: #8eaeba;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

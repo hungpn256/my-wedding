@@ -1,7 +1,10 @@
 import { memo, useMemo, useState } from "react";
-import { Gallery } from "react-grid-gallery";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadComponent,
+  LazyLoadImage,
+} from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Link } from "react-router-dom";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions, Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -18,37 +21,36 @@ function GalleryImage() {
 
   const GalleryMemo = useMemo(() => {
     return (
-      <Gallery
-        images={images}
-        onClick={handleClick}
-        enableImageSelection={false}
-        rowHeight={300}
-        thumbnailImageComponent={(i) => (
-          <LazyLoadImage
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              cursor: "pointer",
-            }}
-            className="lazy-load-image"
-            src={i.item.src}
-            effect="blur"
-          />
-        )}
-      />
+      <div className="row g-5 mt-5">
+        {images.map((item, index) => {
+          return (
+            <div className="col-lg-6" onClick={() => setIndex(index)}>
+              <LazyLoadImage
+                style={{
+                  cursor: "pointer",
+                }}
+                className="lazy-load-image shadow-lg rounded"
+                src={item.src}
+                effect="blur"
+              />
+            </div>
+          );
+        })}
+      </div>
     );
   }, []);
 
   const LightBoxMemo = useMemo(() => {
     return (
-      <Lightbox
-        slides={slides}
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        plugins={[Captions, Fullscreen, Zoom]}
-      />
+      <LazyLoadComponent>
+        <Lightbox
+          slides={slides}
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          plugins={[Captions, Fullscreen, Zoom]}
+        />
+      </LazyLoadComponent>
     );
   }, [index]);
 
@@ -61,13 +63,13 @@ function GalleryImage() {
           <div className="col-sm-12" data-aos="fade-up">
             <h1 className="section-title">Album Hình Cưới</h1>
             <div className="center m-0 mt-2 mb-2">
-              <div
-                onClick={() => handleClick(0)}
+              <Link
+                to="/album"
                 className="btn btn-primary px-2"
                 style={{ minWidth: "240px", maxWidth: "240px" }}
               >
                 Xem album
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -76,8 +78,10 @@ function GalleryImage() {
       <div className="container">
         <div className="row">
           <div className="col col-xs-12">
-            {GalleryMemo}
-            {LightBoxMemo}
+            <LazyLoadComponent>
+              {GalleryMemo}
+              {LightBoxMemo}
+            </LazyLoadComponent>
           </div>
         </div>
       </div>
