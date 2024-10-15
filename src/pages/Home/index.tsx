@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
-import audio from "../../assets/audio.mp3";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { AppContext } from "../../App";
 import Heart from "../../assets/heart.svg";
+import Button from "../../components/Button";
 import Donate from "../../components/Donate";
 import Footer from "../../components/Footer";
 import GalleryImage from "../../components/Gallery";
@@ -14,9 +17,9 @@ import Testimonials from "../../components/Testimonials";
 import { ImageConst } from "../../constants/image.constants";
 
 function HomePage() {
-  const [audioEl] = useState(new Audio(audio));
+  const { audioEl } = useContext(AppContext);
   const [isPlaying, setIsPlaying] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (isPlaying) {
       audioEl.play();
@@ -25,13 +28,33 @@ function HomePage() {
     }
   }, [isPlaying, audioEl]);
 
+  setTimeout(() => {
+    const viewAlbum = localStorage.getItem("viewAlbum");
+    if (!viewAlbum) {
+      toast("Bấm vào đây cùng xem album ảnh nè!!!!", {
+        onClick: () => {
+          navigate("/album");
+        },
+      });
+      setTimeout(() => {
+        const viewAlbum = localStorage.getItem("viewAlbum");
+        if (!viewAlbum) {
+          toast("Xem ảnh đi, đẹp lắm á!!!! Hãy bấm vào đây cùng xem nào!!!", {
+            onClick: () => {
+              navigate("/album");
+            },
+          });
+        }
+      }, 10000);
+    }
+  }, 10000);
+
   const playPause = () => {
     setIsPlaying(!isPlaying);
-    // Logic để phát hoặc tạm dừng nhạc sẽ được thêm vào đây
   };
 
   return (
-    <>
+    <div style={{ paddingBottom: "100vh", position: "relative" }}>
       <HeartFalling />
       <Header />
       <Home />
@@ -378,7 +401,7 @@ function HomePage() {
 
               <div className="timeline_footer">
                 <div>
-                  <i className="icon-diamond-ring"></i>
+                  <i className="fa-solid fa-ring"></i>
                 </div>
                 <div
                   className="punchline animate-from-bottom animation-from-bottom"
@@ -466,13 +489,13 @@ function HomePage() {
                     <div className="d-flex align-items-center event-item-content">
                       <img
                         src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg"
-                        alt="LỄ CƯỚI NHÀ NỮ"
+                        alt="LỄ VU QUY"
                         width="100"
                         height="100"
                         className="d-inline-block rounded-circle me-0 mb-4 me-lg-3 mb-lg-0"
                       />
                       <div className="d-inline-block">
-                        <h3 className="w-100">LỄ CƯỚI NHÀ NỮ</h3>
+                        <h3 className="w-100">LỄ VU QUY</h3>
                         <div className="dresscode-colors-wrap">
                           <div className="dresscode-colors-event">
                             <i className="fa fa-user-tie"></i>
@@ -489,20 +512,20 @@ function HomePage() {
                             ></div>
                             <div
                               className="dresscode-colors-item"
-                              style={{ background: "#623262" }}
+                              style={{ background: "#8ff7df" }}
                             ></div>
                           </div>
                         </div>
                         <p className="w-100 mb-2 mt-2">
                           <i className="fa fa-clock" aria-hidden="true"></i>{" "}
-                          <strong>07:30 10/02/2023</strong>
+                          <strong>09:00 10/11/2024</strong>
                         </p>
                         <p className="w-100 mb-0 mt-1">
                           <i
                             className="fa fa-map-marker"
                             aria-hidden="true"
                           ></i>
-                          <span>TƯ GIA NHÀ NỮ - </span>
+                          <span> GIA ĐÌNH NHÀ GÁI - </span>
                           <strong>
                             Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội
                           </strong>
@@ -518,14 +541,17 @@ function HomePage() {
                     <span className="v-lines"></span>
                     <div className="d-flex align-items-center event-item-content">
                       <img
-                        src="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg"
-                        alt="LỄ CƯỚI NHÀ NỮ"
+                        src="catbanh.png"
+                        alt="LỄ THÀNH HÔN"
                         width="100"
                         height="100"
                         className="d-inline-block rounded-circle me-0 mb-4 me-lg-3 mb-lg-0"
+                        style={{
+                          objectFit: "cover",
+                        }}
                       />
                       <div className="d-inline-block">
-                        <h3 className="w-100">LỄ CƯỚI NHÀ NỮ</h3>
+                        <h3 className="w-100">LỄ THÀNH HÔN</h3>
                         <div className="dresscode-colors-wrap">
                           <div className="dresscode-colors-event">
                             <i className="fa fa-user-tie"></i>
@@ -542,22 +568,22 @@ function HomePage() {
                             ></div>
                             <div
                               className="dresscode-colors-item"
-                              style={{ background: "#623262" }}
+                              style={{ background: "#8ff7df" }}
                             ></div>
                           </div>
                         </div>
                         <p className="w-100 mb-2 mt-2">
                           <i className="fa fa-clock" aria-hidden="true"></i>{" "}
-                          <strong>07:30 10/02/2023</strong>
+                          <strong>11:30 10/11/2024</strong>
                         </p>
                         <p className="w-100 mb-0 mt-1">
                           <i
                             className="fa fa-map-marker"
                             aria-hidden="true"
                           ></i>
-                          <span>TƯ GIA NHÀ NỮ - </span>
+                          <span> GIA ĐÌNH NHÀ TRAI - </span>
                           <strong>
-                            Đội 21, Thôn 4, Xã Thạch Đà, Mê Minh, Hà Nội
+                            Xã Hoàng Diệu, Huyện Gia Lộc, Tỉnh Hải Dương
                           </strong>
                         </p>
                       </div>
@@ -676,7 +702,22 @@ function HomePage() {
           )}
         </div>
       </div>
-    </>
+      <div
+        style={{
+          position: "absolute",
+          bottom: 50,
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Button style={{ width: 400 }}>
+          <Link to="/album" className="text-white">
+            Xem album ảnh cưới
+          </Link>
+        </Button>
+      </div>
+    </div>
   );
 }
 

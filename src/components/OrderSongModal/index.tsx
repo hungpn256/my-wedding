@@ -116,10 +116,7 @@ const OrderSong: React.FC = () => {
                         borderColor: "white",
                       }}
                       onClick={() => {
-                        window.open(
-                          "https://m.me/Kendz256?ref=yourCustomText",
-                          "_blank"
-                        );
+                        window.open("https://m.me/Kendz256", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>
@@ -132,10 +129,7 @@ const OrderSong: React.FC = () => {
                         borderColor: "white",
                       }}
                       onClick={() => {
-                        window.open(
-                          "https://m.me/ha.thu0104?ref=yourCustomText",
-                          "_blank"
-                        );
+                        window.open("https://m.me/ha.thu0104", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>

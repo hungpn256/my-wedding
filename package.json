@@ -20,6 +20,7 @@
     "react-lazy-load-image-component": "^1.6.2",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.27.0",
+    "react-toastify": "^10.0.6",
     "yet-another-react-lightbox": "^3.21.4"
   },
   "devDependencies": {

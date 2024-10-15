@@ -35,7 +35,7 @@ export const imageSrcFull = [
   "2T9A6835.jpg",
 ];
 
-const imageSrcs = ["2T9A5799.jpg", "2T9A6042.jpg"];
+const imageSrcs = ["2T9A6042.jpg", "2T9A6088.jpg"];
 
 export const imageFull = imageSrcFull.map((item) => {
   return {
