@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import audio from "./assets/audio.mp3";
 import Loading from "./components/Loading";
+import ModalOrderSong from "./components/ModalOrderSong";
 const HomePage = lazy(() => import("./pages/Home"));
 const Album = lazy(() => import("./pages/Album"));
 
@@ -16,9 +17,26 @@ export const AppContext = createContext<{
   loading?: boolean;
   setLoading?: React.Dispatch<React.SetStateAction<boolean>>;
   audioEl?: any;
+  setDataOrderSong?: React.Dispatch<
+    React.SetStateAction<{
+      name: string;
+      youtubeUrl: string;
+      forGroom: boolean;
+    }>
+  >;
+  orderSong?: {
+    name: string;
+    youtubeUrl: string;
+    forGroom: boolean;
+  };
 }>({});
 function App() {
   const [loading, setLoading] = useState(true);
+  const [orderSong, setDataOrderSong] = useState({
+    name: "",
+    youtubeUrl: "",
+    forGroom: true,
+  });
   const [audioEl] = useState(new Audio(audio));
 
   useEffect(() => {
@@ -41,10 +59,14 @@ function App() {
 
   return (
     <div>
-      <AppContext.Provider value={{ loading, setLoading, audioEl }}>
+      <AppContext.Provider
+        value={{ loading, setLoading, audioEl, setDataOrderSong, orderSong }}
+      >
         <Suspense fallback={<Loading />}>{routers}</Suspense>
-        {loading && <Loading />}
+
         <ToastContainer />
+        {orderSong.youtubeUrl && <ModalOrderSong />}
+        {loading && <Loading />}
       </AppContext.Provider>
     </div>
   );

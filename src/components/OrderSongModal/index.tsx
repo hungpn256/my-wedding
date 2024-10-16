@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../../App";
 import { axiosClient } from "../../services/axiosClient";
 import Spin from "../Spin";
 import "./style.css";
@@ -11,14 +12,12 @@ interface Video {
   };
 }
 
-// Cấu hình Modal
-// Modal.setAppElement("#root");
-
 const OrderSong: React.FC = () => {
   const [query, setQuery] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [videos, setVideos] = useState<Video[]>([]);
   // const [selectedSong, setSelectedSong] = useState<Video | null>(null);
+  const { setDataOrderSong } = useContext(AppContext);
 
   // Hàm tìm kiếm video từ YouTube
   const handleSearch = async () => {
@@ -116,7 +115,12 @@ const OrderSong: React.FC = () => {
                         borderColor: "white",
                       }}
                       onClick={() => {
-                        window.open("https://m.me/Kendz256", "_blank");
+                        setDataOrderSong?.((prev) => ({
+                          ...prev,
+                          youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
+                          forGroom: true,
+                        }));
+                        // window.open("https://m.me/Kendz256", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>
@@ -129,7 +133,12 @@ const OrderSong: React.FC = () => {
                         borderColor: "white",
                       }}
                       onClick={() => {
-                        window.open("https://m.me/ha.thu0104", "_blank");
+                        setDataOrderSong?.((prev) => ({
+                          ...prev,
+                          youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
+                          forGroom: false,
+                        }));
+                        // window.open("https://m.me/ha.thu0104", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>

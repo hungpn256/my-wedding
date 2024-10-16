@@ -1,103 +1,19 @@
-/* Modal container */
-.modal {
-  width: 600px;
-  max-width: 100%;
-  margin: auto;
-  padding: 20px;
-  background-color: #8eaebacc;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Shadow cho modal */
-  position: relative;
-  display: block !important;
-  max-height: 80%;
-  top: 100px;
+.modal-order-song {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999999999999;
+  background-color: #00000033;
+  animation: fade easy-in 2s;
 }
 
-/* Tiêu đề của modal */
-.modal-title {
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-}
-
-/* Search input và button */
-.modal-search {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.modal-input {
-  width: calc(100% - 110px);
-  padding: 10px;
-  margin-right: 10px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Shadow nhẹ */
-  font-size: 16px;
-  outline: none;
-  transition: border 0.3s ease;
-}
-
-.modal-input:focus {
-  border-color: #1e90ff; /* Màu khi focus */
-}
-
-/* Nút trong modal */
-.modal-button {
-  padding: 10px 20px;
-  background-color: #1e90ff; /* Màu nút */
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow cho nút */
-}
-
-.modal-button:hover {
-  background-color: #005bbb; /* Màu khi hover */
-}
-
-/* Danh sách video */
-.modal-video-list {
-  margin-top: 20px;
-}
-
-.modal-video-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow cho video item */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.modal-video-item:hover {
-  transform: translateY(-5px); /* Hiệu ứng hover dịch lên */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow mạnh hơn khi hover */
-}
-
-/* Frame của video */
-.video-frame {
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow cho iframe */
-}
-
-/* Tiêu đề video */
-.video-title {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #333;
-}
-
-/* Nút đóng modal */
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

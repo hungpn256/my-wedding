@@ -104,26 +104,6 @@ const RSVP = () => {
                       value={content}
                       onChange={(e) => setContent(e.target.value)}
                     ></textarea>
-                    <div className="textAreaIcons">
-                      <div
-                        className="wishes-autocomplete-content"
-                        style={{ display: "none" }}
-                      >
-                        <input
-                          type="text"
-                          id="searchWishSuggestions"
-                          placeholder="Tìm kiếm..."
-                        />
-                        <ul id="wishSuggestions">
-                          <li>
-                            <a className="showContent" href="#">
-                              Chúc mừng hạnh phúc! Chúc hai bạn trăm năm hạnh
-                              phúc!
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
                 </div>
 

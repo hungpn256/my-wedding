@@ -7878,6 +7878,7 @@ textarea.form-control {
   padding: 10px;
   border-top: none;
   border: 1px solid #ddd;
+  z-index: 1;
 }
 #wish-form .textAreaIcons span {
   color: #333;
@@ -7891,55 +7892,6 @@ textarea.form-control {
   padding: 8px 12px;
   font-size: 16px;
 }
-#wish-form .wishes-autocomplete-content {
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  left: 0;
-  z-index: 333;
-  background: #fff;
-  -webkit-box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%),
-    0 2px 6px 2px rgb(60 64 67 / 35%);
-  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%), 0 2px 6px 2px rgb(60 64 67 / 35%);
-}
-#wish-form .wishes-autocomplete-content input {
-  /* background-image: url("https://cdn.biihappy.com/ziiweb/images/static/common/searchicon.png") !important; */
-  background-position: 10px !important;
-  background-repeat: no-repeat !important;
-  width: 100% !important;
-  font-size: 16px !important;
-  padding: 12px 20px 12px 40px !important;
-  border: 1px solid #ddd !important;
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-}
-#wish-form .wishes-autocomplete-content ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-height: 300px;
-  overflow: auto;
-  display: block;
-  height: auto;
-  text-align: left;
-}
-#wish-form .wishes-autocomplete-content ul li a {
-  border: 1px solid #ddd !important;
-  margin-top: -1px !important;
-  padding: 12px !important;
-  text-decoration: none !important;
-  font-size: 15px !important;
-  color: black !important;
-  display: block !important;
-}
-#wish-form .wishes-autocomplete-content ul li a:hover {
-  background-color: #eee !important;
-}
-#wish-form .tooltip-custom {
-  position: relative;
-  display: inline-block;
-}
-
 /* dresscode */
 .events-boxs .dresscode-colors-event {
   position: relative;
