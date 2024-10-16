@@ -72,7 +72,6 @@ const OrderSong: React.FC = () => {
               />
             </div>
             <div
-              rel="noopener noreferrer"
               className="btn btn-primary text-white px-2"
               style={{
                 width: "100px",
@@ -114,14 +113,14 @@ const OrderSong: React.FC = () => {
                       style={{
                         borderColor: "white",
                       }}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         setDataOrderSong?.((prev) => ({
                           ...prev,
                           youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
                           forGroom: true,
                           dataYoutube: video,
                         }));
-                        // window.open("https://m.me/Kendz256", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>
@@ -133,14 +132,14 @@ const OrderSong: React.FC = () => {
                       style={{
                         borderColor: "white",
                       }}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         setDataOrderSong?.((prev) => ({
                           ...prev,
                           youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
                           forGroom: false,
                           dataYoutube: video,
                         }));
-                        // window.open("https://m.me/ha.thu0104", "_blank");
                       }}
                     >
                       <span className="h-lines"></span>
