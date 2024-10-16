@@ -28,26 +28,28 @@ function HomePage() {
     }
   }, [isPlaying, audioEl]);
 
-  setTimeout(() => {
-    const viewAlbum = localStorage.getItem("viewAlbum");
-    if (!viewAlbum) {
-      toast("Bấm vào đây cùng xem album ảnh nè!!!!", {
-        onClick: () => {
-          navigate("/album");
-        },
-      });
-      setTimeout(() => {
-        const viewAlbum = localStorage.getItem("viewAlbum");
-        if (!viewAlbum) {
-          toast("Xem ảnh đi, đẹp lắm á!!!! Hãy bấm vào đây cùng xem nào!!!", {
-            onClick: () => {
-              navigate("/album");
-            },
-          });
-        }
-      }, 10000);
-    }
-  }, 10000);
+  useEffect(() => {
+    setTimeout(() => {
+      const viewAlbum = localStorage.getItem("viewAlbum");
+      if (!viewAlbum) {
+        toast("Bấm vào đây cùng xem album ảnh nè!!!!", {
+          onClick: () => {
+            navigate("/album");
+          },
+        });
+        setTimeout(() => {
+          const viewAlbum = localStorage.getItem("viewAlbum");
+          if (!viewAlbum) {
+            toast("Xem ảnh đi, đẹp lắm á!!!! Hãy bấm vào đây cùng xem nào!!!", {
+              onClick: () => {
+                navigate("/album");
+              },
+            });
+          }
+        }, 20000);
+      }
+    }, 10000);
+  }, []);
 
   const playPause = () => {
     setIsPlaying(!isPlaying);
