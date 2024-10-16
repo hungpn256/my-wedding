@@ -12,7 +12,7 @@ const VerifyRSVP = () => {
   const verify = async () => {
     try {
       const query = new URLSearchParams(location.search);
-      await axiosClient.get("/api/rsvp?id=" + query.get("id"));
+      await axiosClient.get("/api/rsvp/" + query.get("id"));
       toast.success("ok");
     } catch {
       toast("error");

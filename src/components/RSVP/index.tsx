@@ -1,12 +1,14 @@
 import { memo, useEffect, useState } from "react";
 import { IRSVP } from "../../models/rsvp";
 import { createRsvp, getRsvp } from "../../services/rsvp";
+import Spin from "../Spin";
 
 const RSVP = () => {
   const [page] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<
     | {
         type: "success" | "error";
@@ -44,6 +46,8 @@ const RSVP = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (e: any) => {
     try {
+      if (loading) return;
+      setLoading(true);
       e.preventDefault();
       await createRsvp({ name, email, content });
       setMessage({ type: "success" });
@@ -57,6 +61,8 @@ const RSVP = () => {
         message: "Vui lòng nhập đủ thông tin, đúng định dạng email",
       });
       console.log("🚀 ~ onSubmit ~ error:", error);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -131,6 +137,11 @@ const RSVP = () => {
                     <div data-aos="fade-up" id="error">
                       {message.message ||
                         "Error occurred while sending email. Please try again later."}
+                    </div>
+                  )}
+                  {loading && (
+                    <div className="center">
+                      <Spin />
                     </div>
                   )}
                 </div>
