@@ -22,12 +22,14 @@ export const AppContext = createContext<{
       name: string;
       youtubeUrl: string;
       forGroom: boolean;
+      dataYoutube: any;
     }>
   >;
   orderSong?: {
     name: string;
     youtubeUrl: string;
     forGroom: boolean;
+    dataYoutube: any;
   };
 }>({});
 function App() {
@@ -36,6 +38,7 @@ function App() {
     name: "",
     youtubeUrl: "",
     forGroom: true,
+    dataYoutube: undefined,
   });
   const [audioEl] = useState(new Audio(audio));
 
@@ -64,9 +67,9 @@ function App() {
       >
         <Suspense fallback={<Loading />}>{routers}</Suspense>
 
-        <ToastContainer />
         {orderSong.youtubeUrl && <ModalOrderSong />}
         {loading && <Loading />}
+        <ToastContainer />
       </AppContext.Provider>
     </div>
   );

@@ -119,6 +119,7 @@ const OrderSong: React.FC = () => {
                           ...prev,
                           youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
                           forGroom: true,
+                          dataYoutube: video,
                         }));
                         // window.open("https://m.me/Kendz256", "_blank");
                       }}
@@ -137,6 +138,7 @@ const OrderSong: React.FC = () => {
                           ...prev,
                           youtubeUrl: `https://www.youtube.com/watch?v=${video.id.videoId}`,
                           forGroom: false,
+                          dataYoutube: video,
                         }));
                         // window.open("https://m.me/ha.thu0104", "_blank");
                       }}
