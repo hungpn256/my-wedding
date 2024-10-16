@@ -12,6 +12,7 @@ import Loading from "./components/Loading";
 import ModalOrderSong from "./components/ModalOrderSong";
 const HomePage = lazy(() => import("./pages/Home"));
 const Album = lazy(() => import("./pages/Album"));
+const VerifyRSVP = lazy(() => import("./pages/VerifyRSVP"));
 
 export const AppContext = createContext<{
   loading?: boolean;
@@ -57,6 +58,10 @@ function App() {
     {
       path: "/album",
       element: <Album />,
+    },
+    {
+      path: "/verify-rsvp",
+      element: <VerifyRSVP />,
     },
   ]);
 
