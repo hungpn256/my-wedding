@@ -18,13 +18,13 @@ import { ImageConst } from "../../constants/image.constants";
 
 function HomePage() {
   const { audioEl } = useContext(AppContext);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(!audioEl?.paused);
   const navigate = useNavigate();
   useEffect(() => {
     if (isPlaying) {
-      audioEl.play();
+      audioEl?.play();
     } else {
-      audioEl.pause();
+      audioEl?.pause();
     }
   }, [isPlaying, audioEl]);
 

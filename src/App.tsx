@@ -17,7 +17,7 @@ const VerifyRSVP = lazy(() => import("./pages/VerifyRSVP"));
 export const AppContext = createContext<{
   loading?: boolean;
   setLoading?: React.Dispatch<React.SetStateAction<boolean>>;
-  audioEl?: any;
+  audioEl?: HTMLAudioElement;
   setDataOrderSong?: React.Dispatch<
     React.SetStateAction<{
       name: string;
