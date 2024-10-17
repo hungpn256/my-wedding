@@ -28,10 +28,10 @@ const Album = () => {
       thumbnailPosition={isPortrait ? "top" : "left"}
       infinite={false}
       onPlay={() => {
-        audioEl.play();
+        audioEl?.play();
       }}
       onPause={() => {
-        audioEl.pause();
+        audioEl?.pause();
       }}
     />
   );
