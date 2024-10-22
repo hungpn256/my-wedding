@@ -58,7 +58,7 @@ const CreateLink = () => {
             `/?id=${encodeString(JSON.stringify({ value, forGroom: true }))}`
           );
           setText(
-            `${value} ơi, 09-10/11 này bố mẹ tổ chức đám cưới lập gia đình cho ${me}, Trân trọng mời ${value} đến tham dự bữa cơm thân mật với gia đình, chúc phúc cho vợ chồng ${me} lúc 16h00 ngày 09/11 tại thôn Long Tràng, Hoàng Diệu, Gia Lộc, Hải Dương, ${me} sẽ sắp xếp xe ở toà Sông Đà, Phạm Hùng về nhà ${me} ạ.\n\n${
+            `${value} ơi, ngày 09-10/11 này bố mẹ xây dựng hạnh phúc cho ${me}. Trân trọng mời ${value} đến tham dự bữa cơm thân mật với gia đình, chúc phúc cho vợ chồng ${me} lúc 16h00 ngày 09/11 tại thôn Long Tràng, Hoàng Diệu, Gia Lộc, Hải Dương.\n\n${
               location.origin
             }${`/?id=${encodeString(
               JSON.stringify({ value, forGroom: true })
@@ -78,7 +78,13 @@ const CreateLink = () => {
           setLink(
             `/?id=${encodeString(JSON.stringify({ value, forGroom: false }))}`
           );
-          setText("");
+          setText(
+            `${value} ơi, Ngày 9-10/11 này bố mẹ ${me} xây dựng hạnh phúc cho ${me}.  Trân trọng kính mời ${value} chiều Thứ Bảy lúc 16h00 ngày 9/11 tới dự bữa cơm thân mật và sáng Chủ Nhật ngày 10/11 đến đưa ${me} về nhà chồng nha ❤️\n\n${
+              location.origin
+            }${`/?id=${encodeString(
+              JSON.stringify({ value, forGroom: false })
+            )}`}`
+          );
         }}
       >
         <span className="h-lines" style={{ zIndex: 1 }}></span>
@@ -100,12 +106,17 @@ const CreateLink = () => {
             </CopyToClipboard>
           </div>
           <div style={{ marginTop: 40 }}>
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              style={{ width: "100%", height: 200 }}
+            />
             <CopyToClipboard
               text={text}
               onCopy={() => toast.success("Đã copy thư mời")}
             >
               <span style={{ cursor: "pointer", whiteSpace: "pre-wrap" }}>
-                {text}
+                Copy thư
               </span>
             </CopyToClipboard>
           </div>
