@@ -27,26 +27,44 @@ export const decodeString = (encodedString?: string) => {
 
 const CreateLink = () => {
   const [value, setValue] = useState("");
+  const [me, setMe] = useState("");
   const [link, setLink] = useState("");
+  const [text, setText] = useState("");
+
   return (
-    <div>
+    <div style={{ maxWidth: 600, padding: 20 }}>
       <input
         type="text"
         name="name"
         placeholder="Tên gợi nhớ* VD: Dương bạn đại học"
-        className="form-control"
+        className="form-control mt-5"
         value={value}
         onChange={(e) => setValue(e.target.value)}
+      />
+      <input
+        type="text"
+        name="me"
+        placeholder="Xưng hô là?"
+        className="form-control mt-2"
+        value={me}
+        onChange={(e) => setMe(e.target.value)}
       />
       <button
         className="btn"
         type="submit"
         style={{ width: "214px" }}
-        onClick={() =>
+        onClick={() => {
           setLink(
             `/?id=${encodeString(JSON.stringify({ value, forGroom: true }))}`
-          )
-        }
+          );
+          setText(
+            `${value} ơi, 09-10/11 này bố mẹ tổ chức đám cưới lập gia đình cho ${me}, Trân trọng mời ${value} đến tham dự bữa cơm thân mật với gia đình, chúc phúc cho vợ chồng ${me} lúc 16h00 ngày 09/11 tại thôn Long Tràng, Hoàng Diệu, Gia Lộc, Hải Dương, ${me} sẽ sắp xếp xe ở toà Sông Đà, Phạm Hùng về nhà ${me} ạ.\n\n${
+              location.origin
+            }${`/?id=${encodeString(
+              JSON.stringify({ value, forGroom: true })
+            )}`}`
+          );
+        }}
       >
         <span className="h-lines" style={{ zIndex: 1 }}></span>
         <span className="v-lines" style={{ zIndex: 1 }}></span>
@@ -56,11 +74,12 @@ const CreateLink = () => {
         className="btn"
         type="submit"
         style={{ width: "214px" }}
-        onClick={() =>
+        onClick={() => {
           setLink(
             `/?id=${encodeString(JSON.stringify({ value, forGroom: false }))}`
-          )
-        }
+          );
+          setText("");
+        }}
       >
         <span className="h-lines" style={{ zIndex: 1 }}></span>
         <span className="v-lines" style={{ zIndex: 1 }}></span>
@@ -68,17 +87,25 @@ const CreateLink = () => {
       </button>
 
       {link && (
-        <div>
+        <div style={{ padding: 10 }}>
           <Link to={link} target="_blank">
             {link}
           </Link>
           <div>
             <CopyToClipboard
-              text={`${location.host}${link}`}
-              onCopy={() => toast.success("Đã copy")}
+              text={`${location.origin}${link}`}
+              onCopy={() => toast.success("Đã copy link")}
             >
-              <span style={{ cursor: "pointer" }}>
-                Copy to clipboard with span
+              <span style={{ cursor: "pointer" }}>Copy to link clipboard</span>
+            </CopyToClipboard>
+          </div>
+          <div style={{ marginTop: 40 }}>
+            <CopyToClipboard
+              text={text}
+              onCopy={() => toast.success("Đã copy thư mời")}
+            >
+              <span style={{ cursor: "pointer", whiteSpace: "pre-wrap" }}>
+                {text}
               </span>
             </CopyToClipboard>
           </div>
