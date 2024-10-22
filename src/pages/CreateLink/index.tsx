@@ -5,21 +5,21 @@ import { toast } from "react-toastify";
 export const SECRET_KEY = "hunghaaa";
 
 export const encodeString = (inputString?: string) => {
-  const stringWithSignature = `${inputString}|${SECRET_KEY}`;
-  const encodedString = btoa(stringWithSignature);
-  return encodedString;
+  const encoder = new TextEncoder();
+  const utf8Array = encoder.encode(inputString);
+  const base64String = btoa(String.fromCharCode(...utf8Array));
+  return base64String;
 };
 
 export const decodeString = (encodedString?: string) => {
   if (!encodedString) return;
   try {
     const decodedString = atob(encodedString);
-    const [originalString, signature] = decodedString.split("|");
-    if (signature === SECRET_KEY) {
-      return originalString;
-    } else {
-      throw new Error();
-    }
+    const utf8Array = new Uint8Array(
+      [...decodedString].map((char) => char.charCodeAt(0))
+    );
+    const decoder = new TextDecoder();
+    return decoder.decode(utf8Array);
   } catch {
     throw new Error();
   }
