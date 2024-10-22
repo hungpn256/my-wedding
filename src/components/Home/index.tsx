@@ -22,7 +22,9 @@ const Home = () => {
               objectPosition: "20% 20%",
             }}
             src="compressor/2T9A6560.jpg"
-            onLoad={() => setLoading?.(false)}
+            onLoad={() => setTimeout(()=>{
+              setLoading?.(false)
+            }, 2000)}
             onLoadStart={() => setLoading?.(true)}
           ></img>
         </div>
