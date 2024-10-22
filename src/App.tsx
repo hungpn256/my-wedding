@@ -13,6 +13,7 @@ import ModalOrderSong from "./components/ModalOrderSong";
 const HomePage = lazy(() => import("./pages/Home"));
 const Album = lazy(() => import("./pages/Album"));
 const VerifyRSVP = lazy(() => import("./pages/VerifyRSVP"));
+const CreateLink = lazy(() => import("./pages/CreateLink"));
 
 export const AppContext = createContext<{
   loading?: boolean;
@@ -34,7 +35,7 @@ export const AppContext = createContext<{
   };
 }>({});
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [orderSong, setDataOrderSong] = useState({
     name: "",
     youtubeUrl: "",
@@ -45,9 +46,6 @@ function App() {
 
   useEffect(() => {
     AOS.init({ duration: 600, easing: "ease-out-back", once: true });
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
   }, []);
 
   const routers = useRoutes([
@@ -63,6 +61,10 @@ function App() {
       path: "/verify-rsvp",
       element: <VerifyRSVP />,
     },
+    {
+      path: "/create-link",
+      element: <CreateLink />,
+    },
   ]);
 
   return (
@@ -73,6 +75,7 @@ function App() {
         <Suspense fallback={<Loading />}>{routers}</Suspense>
 
         {orderSong.youtubeUrl && <ModalOrderSong />}
+
         {loading && <Loading />}
         <ToastContainer />
       </AppContext.Provider>

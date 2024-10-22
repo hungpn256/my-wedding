@@ -11,6 +11,7 @@ import Header from "../../components/Header";
 import HeartFalling from "../../components/HeartFalling";
 import Home from "../../components/Home";
 import Invitation from "../../components/Invitation";
+import ModalCard from "../../components/ModalCard";
 import OrderSong from "../../components/OrderSongModal";
 import RSVP from "../../components/RSVP";
 import Testimonials from "../../components/Testimonials";
@@ -719,6 +720,7 @@ function HomePage() {
           </Link>
         </Button>
       </div>
+      <ModalCard />
     </div>
   );
 }

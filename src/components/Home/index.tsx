@@ -1,8 +1,10 @@
-import { memo } from "react";
+import { memo, useContext } from "react";
+import { AppContext } from "../../App";
 import NameImage from "../../assets/name.svg";
 import Button from "../Button";
 
 const Home = () => {
+  const { setLoading } = useContext(AppContext);
   return (
     <section
       id="hero"
@@ -20,6 +22,8 @@ const Home = () => {
               objectPosition: "20% 20%",
             }}
             src="compressor/2T9A6560.jpg"
+            onLoad={() => setLoading?.(false)}
+            onLoadStart={() => setLoading?.(true)}
           ></img>
         </div>
       </div>
