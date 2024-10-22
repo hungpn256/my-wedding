@@ -67,9 +67,11 @@ const CreateLink = () => {
         Tạo nhà gái
       </button>
 
-      {value && link && (
+      {link && (
         <div>
-          <Link to={link}>{value}</Link>
+          <Link to={link} target="_blank">
+            {link}
+          </Link>
           <div>
             <CopyToClipboard
               text={`${location.host}${link}`}
