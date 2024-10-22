@@ -12,7 +12,7 @@ const ModalCard = () => {
   useEffect(() => {
     try {
       const query = new URLSearchParams(location.search);
-      const data = query.get("name");
+      const data = query.get("id");
       if (data) {
         const dataEncoded = JSON.parse(decodeString(data) || "");
         setData(dataEncoded);

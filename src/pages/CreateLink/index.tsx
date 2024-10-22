@@ -44,7 +44,7 @@ const CreateLink = () => {
         style={{ width: "214px" }}
         onClick={() =>
           setLink(
-            `/?name=${encodeString(JSON.stringify({ value, forGroom: true }))}`
+            `/?id=${encodeString(JSON.stringify({ value, forGroom: true }))}`
           )
         }
       >
@@ -58,7 +58,7 @@ const CreateLink = () => {
         style={{ width: "214px" }}
         onClick={() =>
           setLink(
-            `/?name=${encodeString(JSON.stringify({ value, forGroom: false }))}`
+            `/?id=${encodeString(JSON.stringify({ value, forGroom: false }))}`
           )
         }
       >
