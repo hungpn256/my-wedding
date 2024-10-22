@@ -58,6 +58,20 @@ const ModalCard = () => {
           <div
             style={{
               position: "absolute",
+              top: 0,
+              right: 0,
+              padding: "1% 2%",
+              fontSize: "clamp(0.2rem, 3vw, 1.5rem)",
+              background: "#fff",
+              cursor: "pointer",
+            }}
+            onClick={closeModal}
+          >
+            <i className="fa-solid fa-xmark"></i>
+          </div>
+          <div
+            style={{
+              position: "absolute",
               top: "32.2%",
               textAlign: "center",
               width: "100%",

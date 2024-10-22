@@ -26,6 +26,7 @@ function GalleryImage() {
               <LazyLoadImage
                 style={{
                   cursor: "pointer",
+                  aspectRatio: "400/600",
                 }}
                 className="lazy-load-image shadow-lg rounded"
                 src={item.src}
