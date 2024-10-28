@@ -79,7 +79,7 @@ const CreateLink = () => {
             `/?id=${encodeString(JSON.stringify({ value, forGroom: false }))}`
           );
           setText(
-            `${value} ơi, Ngày 9-10/11 này bố mẹ ${me} xây dựng hạnh phúc cho ${me}.  Trân trọng kính mời ${value} chiều Thứ Bảy lúc 16h00 ngày 9/11 tới dự bữa cơm thân mật và sáng Chủ Nhật ngày 10/11 đến đưa ${me} về nhà chồng nha ❤️\n\n${
+            `${value} ơi, Ngày 9-10/11 này bố mẹ ${me} xây dựng hạnh phúc cho ${me}. Trân trọng kính mời ${value} chiều Thứ Bảy lúc 17h00 ngày 9/11 tới dự bữa cơm thân mật và sáng Chủ Nhật ngày 10/11 đến đưa ${me} về nhà chồng nha ❤️\n\n${
               location.origin
             }${`/?id=${encodeString(
               JSON.stringify({ value, forGroom: false })
