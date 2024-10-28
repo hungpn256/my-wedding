@@ -58,7 +58,7 @@ const CreateLink = () => {
             `/?id=${encodeString(JSON.stringify({ value, forGroom: true }))}`
           );
           setText(
-            `${value} ơi, ngày 09-10/11 này bố mẹ xây dựng hạnh phúc cho ${me}. Trân trọng mời ${value} đến tham dự bữa cơm thân mật với gia đình, chúc phúc cho vợ chồng ${me} lúc 16h00 ngày 09/11 tại thôn Long Tràng, Hoàng Diệu, Gia Lộc, Hải Dương.\n\n${
+            `${value} ơi, ngày 09-10/11 này bố mẹ xây dựng hạnh phúc cho ${me}. Trân trọng mời ${value} đến tham dự bữa cơm thân mật với gia đình, chúc phúc cho vợ chồng ${me} lúc 16h00 ngày 09/11 tại thôn Long Tràng, Hoàng Diệu, Gia Lộc, Hải Dương nha. Rất vui khi được đón tiếp bạn ☺️\n\n${
               location.origin
             }${`/?id=${encodeString(
               JSON.stringify({ value, forGroom: true })
@@ -79,7 +79,7 @@ const CreateLink = () => {
             `/?id=${encodeString(JSON.stringify({ value, forGroom: false }))}`
           );
           setText(
-            `${value} ơi, Ngày 9-10/11 này bố mẹ ${me} xây dựng hạnh phúc cho ${me}. Trân trọng kính mời ${value} chiều Thứ Bảy lúc 17h00 ngày 9/11 tới dự bữa cơm thân mật và sáng Chủ Nhật ngày 10/11 đến đưa ${me} về nhà chồng nha ❤️\n\n${
+            `${value} ơi, Ngày 9-10/11 này bố mẹ ${me} xây dựng hạnh phúc cho ${me}. Trân trọng kính mời ${value} chiều Thứ Bảy lúc 17h00 ngày 9/11 tới dự bữa cơm thân mật và sáng Chủ Nhật ngày 10/11 đến đưa ${me} về nhà chồng nha ❤️. Rất vui khi được đón tiếp bạn ☺️\n\n${
               location.origin
             }${`/?id=${encodeString(
               JSON.stringify({ value, forGroom: false })
