@@ -36,7 +36,7 @@ const RSVP = () => {
 
   const getData = async (page: number) => {
     try {
-      const res = await getRsvp(page, 10);
+      const res = await getRsvp(page, 20);
       setData(res.data.rsvp);
     } catch (error) {
       console.log("🚀 ~ getData ~ error:", error);
